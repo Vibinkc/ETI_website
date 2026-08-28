@@ -1,6 +1,7 @@
 import { definePage, metadataFor } from "@/lib/page";
 import Breadcrumb from "@/components/Breadcrumb";
 import PageHero from "@/components/PageHero";
+import TitledSection from "@/components/TitledSection";
 
 const ROUTE = "/electrician-trainees/how-to-become-an-et";
 
@@ -19,13 +20,7 @@ export default definePage(ROUTE, (c) => (
 </h1><div className="uk-panel uk-text-lead uk-margin uk-width-xlarge"><p>{c.t("s.5.1.1.1.4.0.p", "Becoming an Electrician Trainee with IBEW Local 569 is the first step toward entering the electrical industry and beginning a path toward apprenticeship.")}</p>
 <p>{c.t("s.5.1.1.1.4.2.p", "Our process ensures new workers enter the field safely, legally, and with strong union support.")}</p></div>
 </PageHero>
-<div className="uk-section-default uk-section uk-section-small-top uk-section-xsmall-bottom">
-                                <div className="uk-container uk-container-small">                
-<div className="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
-<div className="uk-width-1-1">
-                    <div className="uk-panel uk-margin" id="page#0"><div>
-<h2 className="elHead">{c.t("s.7.1.1.1.1.0.1.h2", "Four Step Process")}</h2>
-</div></div>
+<TitledSection c={c} headingKey="s.7.1.1.1.1.0.1.h2" heading="Four Step Process" section="uk-section-default uk-section uk-section-small-top uk-section-xsmall-bottom" panel="uk-panel uk-margin" panelId="page#0">
 <h2 className="uk-h4">
                     {c.t("s.7.1.1.1.3.h2", "Step 1: Sign the Entry-Level Books at the IBEW 569 Hall")}        
 </h2><div className="uk-panel uk-margin"><p data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.7.1.1.1.4.0.p", "Visit the <a href=\"https://www.ibew569.org/\" target=\"_blank\" rel=\"noopener\" title=\"Tap here to visit the IBEW 569 website. Opens in new browser tab\">IBEW Local 569</a> union hall <span style=\"text-transform: uppercase;\">in persson</span> with your <span style=\"text-transform: uppercase;\">valid driver's license</span> and <span style=\"text-transform: uppercase;\">social security card</span> to sign Entry-Level Books.") }} />
@@ -56,11 +51,7 @@ export default definePage(ROUTE, (c) => (
 <li>{c.t("s.7.1.1.1.13.2.3.li", "Proof of ETI enrollment")}</li>
 <li>{c.t("s.7.1.1.1.13.2.5.li", "$25 fee to the state")}</li>
 </ul>
-<p>{c.t("s.7.1.1.1.13.4.p", "Once registered, you are legally allowed to perform electrical work under the supervision of a State-Certified Electrician.")}</p></div>
-</div>
-</div>
-                                </div>                
-</div>
+<p>{c.t("s.7.1.1.1.13.4.p", "Once registered, you are legally allowed to perform electrical work under the supervision of a State-Certified Electrician.")}</p></div></TitledSection>
 <div className="uk-section-default uk-section uk-section-small-top uk-section-medium-bottom">
                                 <div className="uk-container">                
 <div className="uk-grid-margin uk-container uk-container-small" id="page#1">

@@ -3,6 +3,7 @@ import ReadyCta from "@/components/ReadyCta";
 import Breadcrumb from "@/components/Breadcrumb";
 import PageHero from "@/components/PageHero";
 import HeroHeading from "@/components/HeroHeading";
+import TitledSection from "@/components/TitledSection";
 
 const ROUTE = "/applicants/sound-communication/program-overview-and-curriculum";
 
@@ -18,13 +19,7 @@ export default definePage(ROUTE, (c) => (
 <Breadcrumb c={c} keyBase="s.5.1.1.1.1.1" links={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }, { href: "/applicants/sound-communication", html: "<span property=\"name\">Sound &amp; Communication</span>" }]} current="Program Overview and Curriculum" />
 <HeroHeading c={c} titleKey="s.5.1.1.1.3.h1" title="Program Overview and Curriculum" leadKey="s.5.1.1.1.4.div" lead="Start a career in the fast-growing world of low-voltage technology. The Sound & Communications Apprenticeship combines paid, hands-on training with classroom instruction, giving you the skills to install and maintain everything from data networks and security systems to audio/visual and life-safety systems." />
 </PageHero>
-<div className="uk-section-default uk-section uk-section-small-top uk-section-medium-bottom">
-                                <div className="uk-container uk-container-small">                
-<div className="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
-<div className="uk-width-1-1">
-                    <div className="uk-panel uk-margin-medium-bottom" id="page#0"><div>
-<h2 className="elHead">{c.t("s.7.1.1.1.1.0.1.h2", "Program Overview")}</h2>
-</div></div><div className="uk-panel uk-margin"><p>{c.t("s.7.1.1.1.2.0.p", "The Sound & Communications Apprenticeship is a four-year training program that prepares apprentices for careers as Telecommunications Installers and Technicians. The program combines paid on-the-job training with classroom instruction, allowing apprentices to develop the technical skills needed to work in the growing low-voltage industry.")}</p>
+<TitledSection c={c} headingKey="s.7.1.1.1.1.0.1.h2" heading="Program Overview" section="uk-section-default uk-section uk-section-small-top uk-section-medium-bottom" panel="uk-panel uk-margin-medium-bottom" panelId="page#0"><div className="uk-panel uk-margin"><p>{c.t("s.7.1.1.1.2.0.p", "The Sound & Communications Apprenticeship is a four-year training program that prepares apprentices for careers as Telecommunications Installers and Technicians. The program combines paid on-the-job training with classroom instruction, allowing apprentices to develop the technical skills needed to work in the growing low-voltage industry.")}</p>
 <p>{c.t("s.7.1.1.1.2.2.p", "Apprentices complete approximately 6,000 hours of on-the-job training, gaining hands-on experience installing, maintaining, and troubleshooting voice, data, and video systems. This field experience is supported by a minimum of 480 hours of classroom and lab instruction, where apprentices study the theory and practices required for success in the trade.")}</p>
 <p>{c.t("s.7.1.1.1.2.4.p", "Sound & Communications apprentices work in both new construction and existing facilities installing cabling and equipment for telephone systems, computer networks, video distribution, security and access control, audio/video systems, and fire and life-safety systems.")}</p>
 <p>{c.t("s.7.1.1.1.2.6.p", "Graduates of the program gain the training and experience needed to build long-term careers in the telecommunications and low-voltage industry.")}</p></div><div className="uk-panel uk-margin-large-top uk-margin-small-bottom" id="page#1"><div>
@@ -150,11 +145,7 @@ export default definePage(ROUTE, (c) => (
 </ul></div>        
 </div></div>
                 </div>
-</div>
-</div>
-</div>
-                                </div>                
-</div>
+</div></TitledSection>
 <ReadyCta c={c} section="s.9" panelId={2} />
   </>
 ));
