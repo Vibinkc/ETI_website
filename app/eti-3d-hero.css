@@ -1,0 +1,146 @@
+/* ==========================================================================
+   ETI — 3D scroll-driven hero
+   Self-contained. Everything is scoped under .eti3d-ready, which is added by
+   eti-3d-hero.js only after it successfully finds the hero. If the JS fails
+   or is removed, the page renders exactly as the original mirror did.
+   ========================================================================== */
+
+.eti3d-ready.eti3d-hero {
+	perspective: 1100px;
+	perspective-origin: calc(50% + var(--eti3d-mx, 0) * 6%) calc(50% + var(--eti3d-my, 0) * 6%);
+	overflow: hidden;
+	/* progress 0 -> 1 as the hero scrolls out of view, set by JS */
+	--eti3d-p: 0;
+	--eti3d-mx: 0;
+	--eti3d-my: 0;
+}
+
+/* --- deepest plane: the background video ---------------------------------- */
+/* perspective 1100 at z=-520 needs scale (1100+520)/1100 = 1.47 to stay
+   full-bleed; a little extra covers the rotation/drift headroom. */
+.eti3d-ready .eti3d-video {
+	transform:
+		translateZ(calc(-520px + var(--eti3d-p) * 150px))
+		translateY(calc(var(--eti3d-p) * 3vh))
+		scale(1.58);
+	transform-origin: 50% 50%;
+	will-change: transform;
+}
+
+/* --- mid plane: blueprint grid, reads as technical depth ------------------- */
+.eti3d-ready .eti3d-grid {
+	position: absolute;
+	inset: -25%;
+	pointer-events: none;
+	background-image:
+		linear-gradient(rgba(125, 185, 255, .16) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(125, 185, 255, .16) 1px, transparent 1px);
+	background-size: 74px 74px;
+	transform:
+		translateZ(-300px)
+		translateY(calc(var(--eti3d-p) * -6vh))
+		scale(1.32);
+	opacity: calc(.55 - var(--eti3d-p) * .55);
+	-webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 45%, #000 20%, transparent 78%);
+	mask-image: radial-gradient(ellipse 65% 55% at 50% 45%, #000 20%, transparent 78%);
+	will-change: transform, opacity;
+}
+
+/* --- near plane: the headline stack --------------------------------------- */
+.eti3d-ready .eti3d-stage {
+	transform-style: preserve-3d;
+	overflow: visible; /* overflow != visible would flatten the 3D context */
+	transform:
+		translate3d(0, calc(var(--eti3d-p) * -7vh), calc(var(--eti3d-p) * -340px))
+		rotateX(calc(var(--eti3d-p) * 15deg))
+		rotateY(calc(var(--eti3d-mx) * 4deg));
+	opacity: calc(1 - var(--eti3d-p) * .9);
+	will-change: transform, opacity;
+}
+
+/* Each layer sits at its own depth, so the single rotation on the stage
+   above resolves into real parallax between the lines. */
+.eti3d-ready .eti3d-layer {
+	--eti3d-z: 0px;
+	transform: translateZ(var(--eti3d-z));
+	transform-style: preserve-3d;
+}
+
+.eti3d-ready .eti3d-l1 { --eti3d-z: 110px; }
+.eti3d-ready .eti3d-l2 { --eti3d-z: 74px; }
+.eti3d-ready .eti3d-l3 { --eti3d-z: 42px; }
+.eti3d-ready .eti3d-l4 { --eti3d-z: 145px; }
+
+/* Depth cue: the further forward a layer sits, the harder its shadow. */
+.eti3d-ready .eti3d-l1,
+.eti3d-ready .eti3d-l2 { text-shadow: 0 14px 34px rgba(0, 12, 34, .55); }
+.eti3d-ready .eti3d-l3 { text-shadow: 0 8px 22px rgba(0, 12, 34, .45); }
+.eti3d-ready .eti3d-l4 .uk-button { box-shadow: 0 18px 38px rgba(0, 8, 26, .45); }
+
+/* --- entrance: layers fly in from depth, staggered ------------------------- */
+@keyframes eti3dEnter {
+	from { opacity: 0; transform: translateZ(calc(var(--eti3d-z) - 320px)); }
+	to   { opacity: 1; transform: translateZ(var(--eti3d-z)); }
+}
+
+.eti3d-ready.eti3d-in .eti3d-layer {
+	animation: eti3dEnter .95s cubic-bezier(.16, .84, .28, 1) both;
+	animation-delay: calc(var(--eti3d-i, 0) * 130ms);
+}
+
+/* --- scroll cue ----------------------------------------------------------- */
+.eti3d-ready .eti3d-cue {
+	position: absolute;
+	left: 50%;
+	bottom: 26px;
+	width: 26px;
+	height: 42px;
+	margin-left: -13px;
+	border: 2px solid rgba(255, 255, 255, .6);
+	border-radius: 14px;
+	opacity: calc(1 - var(--eti3d-p) * 3);
+	pointer-events: none;
+	z-index: 2;
+}
+
+.eti3d-ready .eti3d-cue::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 8px;
+	width: 3px;
+	height: 7px;
+	margin-left: -1.5px;
+	border-radius: 2px;
+	background: #fff;
+	animation: eti3dCue 1.9s ease-in-out infinite;
+}
+
+@keyframes eti3dCue {
+	0%, 100% { transform: translateY(0);    opacity: 1; }
+	60%      { transform: translateY(14px); opacity: 0; }
+}
+
+/* --- smaller screens: flatten the depth so nothing overflows --------------- */
+@media (max-width: 959px) {
+	.eti3d-ready.eti3d-hero { perspective: 900px; }
+	.eti3d-ready .eti3d-l1 { --eti3d-z: 55px; }
+	.eti3d-ready .eti3d-l2 { --eti3d-z: 38px; }
+	.eti3d-ready .eti3d-l3 { --eti3d-z: 22px; }
+	.eti3d-ready .eti3d-l4 { --eti3d-z: 70px; }
+}
+
+/* --- accessibility: honour a reduced-motion preference -------------------- */
+@media (prefers-reduced-motion: reduce) {
+	.eti3d-ready .eti3d-video,
+	.eti3d-ready .eti3d-grid,
+	.eti3d-ready .eti3d-stage,
+	.eti3d-ready .eti3d-layer {
+		transform: none;
+		opacity: 1;
+		animation: none;
+	}
+	.eti3d-ready .eti3d-video { transform: scale(1); }
+	.eti3d-ready .eti3d-grid,
+	.eti3d-ready .eti3d-cue::after { display: none; }
+}

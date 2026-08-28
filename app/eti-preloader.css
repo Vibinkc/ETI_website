@@ -1,0 +1,95 @@
+/* ==========================================================================
+   ETI — first-paint cover
+   Rendered in the server HTML, faded out once webfonts have settled.
+   ========================================================================== */
+
+.eti-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000; /* above UIkit's offcanvas (1020) and the chat widget */
+  background: #002c5c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.45s ease;
+}
+
+.eti-preloader.is-leaving {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.eti-preloader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  padding: 24px;
+}
+
+.eti-preloader-inner img {
+  width: 190px;
+  max-width: 62vw;
+  height: auto;
+  animation: eti-preloader-in 0.6s cubic-bezier(0.16, 0.84, 0.28, 1) both;
+}
+
+/* Indeterminate rail: the load has no measurable progress, so it shows
+   activity rather than pretending to a percentage. */
+.eti-preloader-bar {
+  position: relative;
+  width: 168px;
+  max-width: 56vw;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  overflow: hidden;
+}
+
+.eti-preloader-bar span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  border-radius: 999px;
+  background: #81c341;
+  animation: eti-preloader-sweep 1.15s ease-in-out infinite;
+}
+
+@keyframes eti-preloader-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes eti-preloader-sweep {
+  0% {
+    transform: translateX(-105%);
+  }
+  100% {
+    transform: translateX(255%);
+  }
+}
+
+/* The cover is only safe to show because script can remove it. With script
+   disabled nothing would ever remove it, so the layout also ships a
+   <noscript> rule that hides it outright. */
+
+@media (prefers-reduced-motion: reduce) {
+  .eti-preloader-inner img {
+    animation: none;
+  }
+
+  .eti-preloader-bar span {
+    animation: none;
+    width: 100%;
+    opacity: 0.7;
+  }
+}
