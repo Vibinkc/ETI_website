@@ -114,8 +114,8 @@ export default definePage(ROUTE, (c) => (
 </div>
 <div className="uk-margin">
     <div data-ye-form-field="Program"><label className="uk-form-label" htmlFor="Program" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.5.1.1.1.1.1.1.1.19.1.0.label", "Which program are you interested in? <span>*</span>") }} /><div className="uk-form-controls">
-        <select className="uk-select uk-form-width-large" id="Program" name="Program" required={true}>
-                <option disabled={true} selected={true} value="">Choose One</option>
+        <select className="uk-select uk-form-width-large" id="Program" name="Program" required={true} defaultValue="">
+                <option disabled={true} value="">Choose One</option>
                 <option value="Inside Wireman">Inside Wireman</option>
                 <option value="Sound & Communication">Sound & Communication</option>
                 <option value="Intelligent Transportation Systems">Intelligent Transportation Systems</option>
