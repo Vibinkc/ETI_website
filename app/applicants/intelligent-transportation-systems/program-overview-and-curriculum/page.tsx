@@ -13,40 +13,15 @@ export const generateMetadata = metadataFor(ROUTE, "Program Overview and Curricu
 
 export default definePage(ROUTE, (c) => (
   <>
-
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0{margin-top:7%;}#page\\#1{margin-top:7%;}#page\\#2{text-transform: uppercase;}#page\\#3 .el-content{font-weight:bold;font-size:105%;}" }} />
 <PageHero c={c} image={{ imgKey: "s.5.1.3.1.1.1.0.img", src: "/images/assets/heros/hero-g17.jpg", alt: "Electrician Trainee digging a ditch for powerlines.", width: "1200", height: "1200", aspectAuto: true }}>        
-            
-            
-            
-                
-                    
-
 <Breadcrumb c={c} keyBase="s.5.1.1.1.1.1" links={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }, { href: "/applicants/intelligent-transportation-systems", html: "<span property=\"name\">Intelligent Transportation Systems</span>" }]} current="Program Overview and Curriculum" />
-
 <HeroHeading c={c} titleKey="s.5.1.1.1.3.h1" title="Program Overview and Curriculum" leadKey="s.5.1.1.1.4.div" lead="The Intelligent Transportation Systems (ITS) Apprenticeship is a four-year program that prepares individuals for careers working on public infrastructure systems. Apprentices gain hands-on experience with traffic signals, street lighting, and transportation technologies while completing classroom training that builds the technical knowledge required for the trade." />
-                
-            
-        
 </PageHero>
 <div className="uk-section-default uk-section uk-section-small-top uk-section-medium-bottom">
-    
-        
-        
-        
-            
                                 <div className="uk-container uk-container-small">                
-                    
 <div className="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
-    
-        
 <div className="uk-width-1-1">
-    
-        
-            
-            
-            
-                
                     <div className="uk-panel uk-margin-medium-bottom" id="page#0"><div>
 <h2 className="elHead">{c.t("s.7.1.1.1.1.0.1.h2", "Program Overview")}</h2>
 </div></div><div className="uk-panel uk-margin"><p>{c.t("s.7.1.1.1.2.0.p", "The Intelligent Transportation Systems (ITS) Apprenticeship is a four-year training program that prepares apprentices for careers as Transportation Systems Electricians. The program combines paid on-the-job training with structured classroom instruction, equipping apprentices with the technical knowledge and field experience required to work on critical public infrastructure systems.")}</p>
@@ -58,21 +33,10 @@ export default definePage(ROUTE, (c) => (
 <h2 className="elHead">{c.t("s.7.1.1.1.3.0.1.h2", "Curriculum")}</h2>
 </div></div>
 <h2 className="uk-text-small uk-heading-line uk-margin-large-top uk-margin-medium-bottom uk-width-medium uk-margin-auto uk-text-center" id="page#2" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.7.1.1.1.5.h2", "<span>    \n        \n                    To Be Announced        \n        \n        </span>") }} />
-                
-            
-        
-    
 </div>
-    
 </div>
                                 </div>                
-            
-        
-    
 </div>
 <ReadyCta c={c} section="s.9" panelId={3} />
-
-                
-            
   </>
 ));

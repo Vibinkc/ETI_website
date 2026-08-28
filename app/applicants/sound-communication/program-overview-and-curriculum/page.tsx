@@ -13,40 +13,15 @@ export const generateMetadata = metadataFor(ROUTE, "Program Overview and Curricu
 
 export default definePage(ROUTE, (c) => (
   <>
-
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0{margin-top:7%;}#page\\#1{margin-top:7%;}#page\\#2 .el-content{font-weight:bold;font-size:105%;}" }} />
 <PageHero c={c} image={{ imgKey: "s.5.1.3.1.1.1.0.img", src: "/images/assets/heros/hero-em03.jpg", alt: "Electrician trainee in school working with wires.", width: "1200", height: "1200", lazy: true }} rightWidth="uk-width-2-5@m" rightCardClass="uk-card-primary uk-card uk-card-body uk-padding-remove" imageWrapClass="uk-margin">        
-            
-            
-            
-                
-                    
-
 <Breadcrumb c={c} keyBase="s.5.1.1.1.1.1" links={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }, { href: "/applicants/sound-communication", html: "<span property=\"name\">Sound &amp; Communication</span>" }]} current="Program Overview and Curriculum" />
-
 <HeroHeading c={c} titleKey="s.5.1.1.1.3.h1" title="Program Overview and Curriculum" leadKey="s.5.1.1.1.4.div" lead="Start a career in the fast-growing world of low-voltage technology. The Sound & Communications Apprenticeship combines paid, hands-on training with classroom instruction, giving you the skills to install and maintain everything from data networks and security systems to audio/visual and life-safety systems." />
-                
-            
-        
 </PageHero>
 <div className="uk-section-default uk-section uk-section-small-top uk-section-medium-bottom">
-    
-        
-        
-        
-            
                                 <div className="uk-container uk-container-small">                
-                    
 <div className="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
-    
-        
 <div className="uk-width-1-1">
-    
-        
-            
-            
-            
-                
                     <div className="uk-panel uk-margin-medium-bottom" id="page#0"><div>
 <h2 className="elHead">{c.t("s.7.1.1.1.1.0.1.h2", "Program Overview")}</h2>
 </div></div><div className="uk-panel uk-margin"><p>{c.t("s.7.1.1.1.2.0.p", "The Sound & Communications Apprenticeship is a four-year training program that prepares apprentices for careers as Telecommunications Installers and Technicians. The program combines paid on-the-job training with classroom instruction, allowing apprentices to develop the technical skills needed to work in the growing low-voltage industry.")}</p>
@@ -56,25 +31,10 @@ export default definePage(ROUTE, (c) => (
 <h2 className="elHead">{c.t("s.7.1.1.1.3.0.1.h2", "Curriculum")}</h2>
 </div></div><div className="uk-panel uk-text-large uk-margin-xsmall-bottom uk-text-center">{c.t("s.7.1.1.1.4.div", "Sound Technician")}</div><div className="uk-panel uk-margin-remove-top uk-margin-large-bottom uk-text-center">{c.t("s.7.1.1.1.5.div", "(4-year program)")}</div>
 <div className="uk-margin">
-    
         <div className="uk-grid uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-flex-center uk-grid-row-large uk-grid-match" uk-grid="">                <div>
 <div className="el-item uk-panel uk-margin-remove-first-child">
-    
-        
-            
-                
-            
-            
-                                                
-                
-                    
-
-        
                 <h3 className="el-title uk-heading-bullet uk-margin-top uk-margin-remove-bottom">{c.t("s.7.1.1.1.7.1.1.1.1.h3", "APSC 101")}</h3>        
                 <div className="el-meta uk-text-meta uk-margin-remove-top">{c.t("s.7.1.1.1.7.1.1.1.3.div", "(2-week day school format)")}</div>        
-    
-        
-        
                 <div className="el-content uk-panel uk-margin-small-top"><ul>
 <li>{c.t("s.7.1.1.1.7.1.1.1.5.0.1.li", "Code I")}</li>
 <li>{c.t("s.7.1.1.1.7.1.1.1.5.0.3.li", "Blueprints I")}</li>
@@ -91,33 +51,10 @@ export default definePage(ROUTE, (c) => (
 <li>{c.t("s.7.1.1.1.7.1.1.1.5.0.25.li", "Powder Actuated Tools Certification")}</li>
 <li>{c.t("s.7.1.1.1.7.1.1.1.5.0.27.li", "Safety I (OSHA 10 & CPR)")}</li>
 </ul></div>        
-        
-        
-
-                
-                
-            
-        
-    
 </div></div>
                 <div>
 <div className="el-item uk-panel uk-margin-remove-first-child">
-    
-        
-            
-                
-            
-            
-                                                
-                
-                    
-
-        
                 <h3 className="el-title uk-heading-bullet uk-margin-top uk-margin-remove-bottom">{c.t("s.7.1.1.1.7.1.3.1.1.h3", "APSC 102")}</h3>        
-        
-    
-        
-        
                 <div className="el-content uk-panel uk-margin-small-top"><ul>
 <li>{c.t("s.7.1.1.1.7.1.3.1.3.0.1.li", "Code II (Applied Codeology)")}</li>
 <li>{c.t("s.7.1.1.1.7.1.3.1.3.0.3.li", "Network II (Fiber)")}</li>
@@ -127,33 +64,10 @@ export default definePage(ROUTE, (c) => (
 <li>{c.t("s.7.1.1.1.7.1.3.1.3.0.11.li", "Install/Tech Elec Job Info 1")}</li>
 <li>{c.t("s.7.1.1.1.7.1.3.1.3.0.13.li", "Install/Tech Elec Job Info 3")}</li>
 </ul></div>        
-        
-        
-
-                
-                
-            
-        
-    
 </div></div>
                 <div>
 <div className="el-item uk-panel uk-margin-remove-first-child">
-    
-        
-            
-                
-            
-            
-                                                
-                
-                    
-
-        
                 <h3 className="el-title uk-heading-bullet uk-margin-top uk-margin-remove-bottom">{c.t("s.7.1.1.1.7.1.5.1.1.h3", "APSC 103")}</h3>        
-        
-    
-        
-        
                 <div className="el-content uk-panel uk-margin-small-top"><ul>
 <li>{c.t("s.7.1.1.1.7.1.5.1.3.0.1.li", "Electrical Theory I (DC)")}</li>
 <li>{c.t("s.7.1.1.1.7.1.5.1.3.0.3.li", "Computer Skills I")}</li>
@@ -163,33 +77,10 @@ export default definePage(ROUTE, (c) => (
 <li>{c.t("s.7.1.1.1.7.1.5.1.3.0.11.li", "Leadership I")}</li>
 <li>{c.t("s.7.1.1.1.7.1.5.1.3.0.13.li", "Code III (CodeStandards& Practices 1-Level 1)")}</li>
 </ul></div>        
-        
-        
-
-                
-                
-            
-        
-    
 </div></div>
                 <div>
 <div className="el-item uk-panel uk-margin-remove-first-child">
-    
-        
-            
-                
-            
-            
-                                                
-                
-                    
-
-        
                 <h3 className="el-title uk-heading-bullet uk-margin-top uk-margin-remove-bottom">{c.t("s.7.1.1.1.7.1.7.1.1.h3", "APSC 104")}</h3>        
-        
-    
-        
-        
                 <div className="el-content uk-panel uk-margin-small-top"><ul>
 <li>{c.t("s.7.1.1.1.7.1.7.1.3.0.1.li", "Electrical Theory II (AC Systems)")}</li>
 <li>{c.t("s.7.1.1.1.7.1.7.1.3.0.3.li", "Electrical Theory III (AC Theory)")}</li>
@@ -202,33 +93,10 @@ export default definePage(ROUTE, (c) => (
 <li>{c.t("s.7.1.1.1.7.1.7.1.3.0.17.li", "Code IV (Installer/Tech Code 2)")}</li>
 <li>{c.t("s.7.1.1.1.7.1.7.1.3.0.19.li", "Material ID III")}</li>
 </ul></div>        
-        
-        
-
-                
-                
-            
-        
-    
 </div></div>
                 <div>
 <div className="el-item uk-panel uk-margin-remove-first-child">
-    
-        
-            
-                
-            
-            
-                                                
-                
-                    
-
-        
                 <h3 className="el-title uk-heading-bullet uk-margin-top uk-margin-remove-bottom">{c.t("s.7.1.1.1.7.1.9.1.1.h3", "APSC 105")}</h3>        
-        
-    
-        
-        
                 <div className="el-content uk-panel uk-margin-small-top"><ul>
 <li>{c.t("s.7.1.1.1.7.1.9.1.3.0.1.li", "Electronics I")}</li>
 <li>{c.t("s.7.1.1.1.7.1.9.1.3.0.3.li", "Fire II")}</li>
@@ -242,33 +110,10 @@ export default definePage(ROUTE, (c) => (
 <li>{c.t("s.7.1.1.1.7.1.9.1.3.0.19.li", "Network III (IP Addresses/Classes (IPv4 & IPv6))")}</li>
 <li>{c.t("s.7.1.1.1.7.1.9.1.3.0.21.li", "Remote Communication Systems I")}</li>
 </ul></div>        
-        
-        
-
-                
-                
-            
-        
-    
 </div></div>
                 <div>
 <div className="el-item uk-panel uk-margin-remove-first-child">
-    
-        
-            
-                
-            
-            
-                                                
-                
-                    
-
-        
                 <h3 className="el-title uk-heading-bullet uk-margin-top uk-margin-remove-bottom">{c.t("s.7.1.1.1.7.1.11.1.1.h3", "APSC 106")}</h3>        
-        
-    
-        
-        
                 <div className="el-content uk-panel uk-margin-small-top"><ul>
 <li>{c.t("s.7.1.1.1.7.1.11.1.3.0.1.li", "State Cert Prep I (Code VI)")}</li>
 <li>{c.t("s.7.1.1.1.7.1.11.1.3.0.3.li", "Remote Communication Systems II")}</li>
@@ -278,33 +123,10 @@ export default definePage(ROUTE, (c) => (
 <li>{c.t("s.7.1.1.1.7.1.11.1.3.0.11.li", "Meters VI")}</li>
 <li>{c.t("s.7.1.1.1.7.1.11.1.3.0.13.li", "Network IV (WECAT [Cyber Security, SBEMS], (IPv4 & IPv6 continued))")}</li>
 </ul></div>        
-        
-        
-
-                
-                
-            
-        
-    
 </div></div>
                 <div>
 <div className="el-item uk-panel uk-margin-remove-first-child">
-    
-        
-            
-                
-            
-            
-                                                
-                
-                    
-
-        
                 <h3 className="el-title uk-heading-bullet uk-margin-top uk-margin-remove-bottom">{c.t("s.7.1.1.1.7.1.13.1.1.h3", "APSC 107")}</h3>        
-        
-    
-        
-        
                 <div className="el-content uk-panel uk-margin-small-top"><ul>
 <li>{c.t("s.7.1.1.1.7.1.13.1.3.0.1.li", "Access Control I")}</li>
 <li>{c.t("s.7.1.1.1.7.1.13.1.3.0.3.li", "Security I (Intelligent Network Video)")}</li>
@@ -317,65 +139,22 @@ export default definePage(ROUTE, (c) => (
 <li>{c.t("s.7.1.1.1.7.1.13.1.3.0.17.li", "Network II Revisited (Fiber)")}</li>
 <li>{c.t("s.7.1.1.1.7.1.13.1.3.0.19.li", "Network III Revisited (IP Addressing)")}</li>
 </ul></div>        
-        
-        
-
-                
-                
-            
-        
-    
 </div></div>
                 <div>
 <div className="el-item uk-panel uk-margin-remove-first-child">
-    
-        
-            
-                
-            
-            
-                                                
-                
-                    
-
-        
                 <h3 className="el-title uk-heading-bullet uk-margin-top uk-margin-remove-bottom">{c.t("s.7.1.1.1.7.1.15.1.1.h3", "APSC 108")}</h3>        
-        
-    
-        
-        
                 <div className="el-content uk-panel uk-margin-small-top"><ul>
 <li>{c.t("s.7.1.1.1.7.1.15.1.3.0.1.li", "Leadership II")}</li>
 <li>{c.t("s.7.1.1.1.7.1.15.1.3.0.3.li", "Safety II (OSHA, 30EM-385) Code VIII")}</li>
 <li>{c.t("s.7.1.1.1.7.1.15.1.3.0.5.li", "Computer Skills VI")}</li>
 </ul></div>        
-        
-        
-
-                
-                
-            
-        
-    
 </div></div>
                 </div>
-    
 </div>
-                
-            
-        
-    
 </div>
-    
 </div>
                                 </div>                
-            
-        
-    
 </div>
 <ReadyCta c={c} section="s.9" panelId={2} />
-
-                
-            
   </>
 ));
