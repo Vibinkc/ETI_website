@@ -1,95 +1,33 @@
-import type { Metadata } from "next";
-import { getContent, pageMetadata } from "@/lib/content";
+import { definePage, metadataFor } from "@/lib/page";
+import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
+import HeroHeading from "@/components/HeroHeading";
 
 const ROUTE = "/continuing-education/classes";
 
 // re-rendered on demand when the CMS publishes this page
 export const revalidate = 3600;
 
-export async function generateMetadata(): Promise<Metadata> {
-  return pageMetadata(ROUTE, "Classes - Electrical Training Institute", undefined);
-}
+export const generateMetadata = metadataFor(ROUTE, "Classes - Electrical Training Institute", undefined);
 
-export default async function Page() {
-  const c = await getContent(ROUTE);
-  return (
-    <>
-<main id="tm-main">
-
-                
-                <div id="system-message-container" aria-live="polite"></div>
+export default definePage(ROUTE, (c) => (
+  <>
 
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0 .el-title{display: flex; align-items: center; justify-content: center; /* optional for horizontal center */ height: 100%; font-weight: bold;}" }} />
-<div className="uk-section uk-padding-remove-vertical">
-    
-        
-        
-        
-            
-                
-                    
-<div className="uk-grid-margin-large uk-grid tm-grid-expand uk-grid-column-collapse uk-grid-row-large" uk-grid="">
-    
-        
-<div className="uk-grid-item-match uk-width-3-5@m">
-        <div className="uk-card-primary uk-card uk-card-body">    
-        
+<PageHero c={c} image={{ imgKey: "s.5.1.3.1.1.1.0.img", src: "/images/assets/heros/hero-g18.jpg", alt: "students in a classroom", width: "1200", height: "1200", aspectAuto: true }} rightCardClass="uk-card-default uk-card uk-card-body uk-padding-remove uk-flex uk-flex-column">        
             
             
             
                 
                     
 
-<nav aria-label="Breadcrumb" className="uk-margin-small-bottom">
-    <ul className="uk-breadcrumb uk-margin-remove-bottom" vocab="https://schema.org/" typeof="BreadcrumbList">
-    
-            <li property="itemListElement" typeof="ListItem">            <a href="/" property="item" typeof="WebPage" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.5.1.1.1.1.1.1.1.a", "<span property=\"name\">Home</span>") }} />
-            <meta property="position" content="1" />
-            </li>    
-            <li property="itemListElement" typeof="ListItem">            <a href="/continuing-education" property="item" typeof="WebPage" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.5.1.1.1.1.1.3.1.a", "<span property=\"name\">Continuing Education</span>") }} />
-            <meta property="position" content="2" />
-            </li>    
-            <li property="itemListElement" typeof="ListItem">            <span property="name" aria-current="page">{c.t("s.5.1.1.1.1.1.5.1.span", "Classes")}</span>            <meta property="position" content="3" />
-            </li>    
-    </ul>
-</nav>
+<Breadcrumb c={c} keyBase="s.5.1.1.1.1.1" links={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/continuing-education", html: "<span property=\"name\">Continuing Education</span>" }]} current="Classes" />
 
-<h1 className="uk-heading-medium uk-margin-large-bottom">
-    
-        
-                    {c.t("s.5.1.1.1.3.h1", "Classes")}        
-        
-    
-</h1><div className="uk-panel uk-text-lead uk-margin uk-width-xlarge">{c.t("s.5.1.1.1.4.div", "Continuing education helps electrical professionals stay sharp, stay qualified, and stay ahead in a changing industry. This section features training opportunities designed to strengthen skills, support certification requirements and promote long-term success in the union electrical trade.")}</div>
+<HeroHeading c={c} titleKey="s.5.1.1.1.3.h1" title="Classes" leadKey="s.5.1.1.1.4.div" lead="Continuing education helps electrical professionals stay sharp, stay qualified, and stay ahead in a changing industry. This section features training opportunities designed to strengthen skills, support certification requirements and promote long-term success in the union electrical trade." />
                 
             
         
-        </div>    
-</div>
-<div className="uk-grid-item-match uk-width-2-5@m uk-visible@m">
-        <div className="uk-card-default uk-card uk-card-body uk-padding-remove uk-flex uk-flex-column">    
-        
-            
-            
-            
-                
-                    
-<div className="uk-flex-1 uk-flex uk-margin uk-visible@m">
-        <picture><img className="el-image" style={{ aspectRatio: "auto" }} width="1200" height="1200" src={c.m("s.5.1.3.1.1.1.0.img", "/images/assets/heros/hero-g18.jpg")} alt={c.a("s.5.1.3.1.1.1.0.img", "students in a classroom")} /></picture>    
-    
-</div>
-                
-            
-        
-        </div>    
-</div>
-    
-</div>
-                
-            
-        
-    
-</div>
+</PageHero>
 <div className="uk-section-default uk-section">
     
         
@@ -196,7 +134,6 @@ export default async function Page() {
 </div>
 
                 
-            </main>
-    </>
-  );
-}
+            
+  </>
+));

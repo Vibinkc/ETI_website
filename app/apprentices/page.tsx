@@ -1,23 +1,14 @@
-import type { Metadata } from "next";
-import { getContent, pageMetadata } from "@/lib/content";
+import { definePage, metadataFor } from "@/lib/page";
 
 const ROUTE = "/apprentices";
 
 // re-rendered on demand when the CMS publishes this page
 export const revalidate = 3600;
 
-export async function generateMetadata(): Promise<Metadata> {
-  return pageMetadata(ROUTE, "Apprentices - Electrical Training Institute", undefined);
-}
+export const generateMetadata = metadataFor(ROUTE, "Apprentices - Electrical Training Institute", undefined);
 
-export default async function Page() {
-  const c = await getContent(ROUTE);
-  return (
-    <>
-<main id="tm-main">
-
-                
-                <div id="system-message-container" aria-live="polite"></div>
+export default definePage(ROUTE, (c) => (
+  <>
 
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0{text-transform: uppercase;}#page\\#1{text-transform: uppercase;}#page\\#2 .el-item{padding:0px 9px;}#page\\#2 .el-item:not(:last-child){border-right: 1.5px solid;}#page\\#2 .el-item{text-transform:uppercase;}#page\\#3{text-transform: uppercase;}#page\\#4{margin-top:7%;}#page\\#5{margin-bottom:40px;}#page\\#5 .el-item{border-bottom: 1.5px dotted #7b7a7a; padding-bottom: 7px}#page\\#5 .el-content{margin-bottom:20px;}#page\\#5 .el-content ul{list-style-type: none;padding-left: 10px;}#page\\#6{background-color:#EBECE9;}#page\\#7{background-image:url(\"/images/assets/diagram.png\");background-repeat:repeat;}@media (max-width:900px){#page\\#7{background-image:none;}}" }} />
 <div className="uk-section uk-padding-remove-vertical">
@@ -301,7 +292,6 @@ export default async function Page() {
 </div>
 
                 
-            </main>
-    </>
-  );
-}
+            
+  </>
+));

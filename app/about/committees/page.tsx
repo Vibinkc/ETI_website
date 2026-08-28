@@ -1,23 +1,14 @@
-import type { Metadata } from "next";
-import { getContent, pageMetadata } from "@/lib/content";
+import { definePage, metadataFor } from "@/lib/page";
 
 const ROUTE = "/about/committees";
 
 // re-rendered on demand when the CMS publishes this page
 export const revalidate = 3600;
 
-export async function generateMetadata(): Promise<Metadata> {
-  return pageMetadata(ROUTE, "Committees - Electrical Training Institute", undefined);
-}
+export const generateMetadata = metadataFor(ROUTE, "Committees - Electrical Training Institute", undefined);
 
-export default async function Page() {
-  const c = await getContent(ROUTE);
-  return (
-    <>
-<main id="tm-main">
-
-                
-                <div id="system-message-container" aria-live="polite"></div>
+export default definePage(ROUTE, (c) => (
+  <>
 
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0 .el-title{text-transform:uppercase;}" }} />
 <div className="uk-section uk-padding-remove-vertical">
@@ -304,7 +295,6 @@ export default async function Page() {
 </div>
 
                 
-            </main>
-    </>
-  );
-}
+            
+  </>
+));

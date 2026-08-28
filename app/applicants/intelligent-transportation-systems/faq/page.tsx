@@ -1,121 +1,36 @@
-import type { Metadata } from "next";
-import { getContent, pageMetadata } from "@/lib/content";
+import { definePage, metadataFor } from "@/lib/page";
+import ReadyCta from "@/components/ReadyCta";
+import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
+import HeroHeading from "@/components/HeroHeading";
+import FaqSection from "@/components/FaqSection";
 
 const ROUTE = "/applicants/intelligent-transportation-systems/faq";
 
 // re-rendered on demand when the CMS publishes this page
 export const revalidate = 3600;
 
-export async function generateMetadata(): Promise<Metadata> {
-  return pageMetadata(ROUTE, "FAQ - Electrical Training Institute", undefined);
-}
+export const generateMetadata = metadataFor(ROUTE, "FAQ - Electrical Training Institute", undefined);
 
-export default async function Page() {
-  const c = await getContent(ROUTE);
-  return (
-    <>
-<main id="tm-main">
-
-                
-                <div id="system-message-container" aria-live="polite"></div>
+export default definePage(ROUTE, (c) => (
+  <>
 
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0{margin-top:7%;}#page\\#1{margin-bottom:40px;}#page\\#1 .el-item{border-bottom: 1.5px dotted #7b7a7a; padding-bottom: 7px}#page\\#1 .el-content{margin-bottom:20px;}#page\\#1 .el-content ul{list-style-type: none;padding-left: 10px;}#page\\#2{background-color:#EBECE9;}#page\\#3{background-image:url(\"/images/assets/diagram.png\");background-repeat:repeat;}@media (max-width:900px){#page\\#3{background-image:none;}}#page\\#4 .el-content{font-weight:bold;font-size:105%;}" }} />
-<div className="uk-section uk-padding-remove-vertical">
-    
-        
-        
-        
-            
-                
-                    
-<div className="uk-grid-margin-large uk-grid tm-grid-expand uk-grid-column-collapse uk-grid-row-large" uk-grid="">
-    
-        
-<div className="uk-grid-item-match uk-width-3-5@m">
-        <div className="uk-card-primary uk-card uk-card-body">    
-        
+<PageHero c={c} image={{ imgKey: "s.5.1.3.1.1.1.0.img", src: "/images/assets/heros/hero-g06.jpg", alt: "Instructor explaining cable connections to a femail Electrician Trainee in class", width: "1200", height: "1200", aspectAuto: true }}>        
             
             
             
                 
                     
 
-<nav aria-label="Breadcrumb" className="uk-margin-small-bottom">
-    <ul className="uk-breadcrumb uk-margin-remove-bottom" vocab="https://schema.org/" typeof="BreadcrumbList">
-    
-            <li property="itemListElement" typeof="ListItem">            <a href="/" property="item" typeof="WebPage" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.5.1.1.1.1.1.1.1.a", "<span property=\"name\">Home</span>") }} />
-            <meta property="position" content="1" />
-            </li>    
-            <li property="itemListElement" typeof="ListItem">            <a href="/applicants" property="item" typeof="WebPage" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.5.1.1.1.1.1.3.1.a", "<span property=\"name\">Applicants</span>") }} />
-            <meta property="position" content="2" />
-            </li>    
-            <li property="itemListElement" typeof="ListItem">            <a href="/applicants/intelligent-transportation-systems" property="item" typeof="WebPage" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.5.1.1.1.1.1.5.1.a", "<span property=\"name\">Intelligent Transportation Systems</span>") }} />
-            <meta property="position" content="3" />
-            </li>    
-            <li property="itemListElement" typeof="ListItem">            <span property="name" aria-current="page">{c.t("s.5.1.1.1.1.1.7.1.span", "FAQ")}</span>            <meta property="position" content="4" />
-            </li>    
-    </ul>
-</nav>
+<Breadcrumb c={c} keyBase="s.5.1.1.1.1.1" links={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }, { href: "/applicants/intelligent-transportation-systems", html: "<span property=\"name\">Intelligent Transportation Systems</span>" }]} current="FAQ" />
 
-<h1 className="uk-heading-medium uk-margin-large-bottom">
-    
-        
-                    {c.t("s.5.1.1.1.3.h1", "Frequently Asked Questions")}        
-        
-    
-</h1><div className="uk-panel uk-text-lead uk-margin uk-width-xlarge" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.5.1.1.1.4.div", "This is where you will find most answers. If there should still be any questions left, don't hesitate to <a href=\"/contact\" title=\"Click here to contact us.\">contact us</a>.") }} />
+<HeroHeading c={c} titleKey="s.5.1.1.1.3.h1" title="Frequently Asked Questions" leadKey="s.5.1.1.1.4.div" leadHtml={"This is where you will find most answers. If there should still be any questions left, don't hesitate to <a href=\"/contact\" title=\"Click here to contact us.\">contact us</a>."} />
                 
             
         
-        </div>    
-</div>
-<div className="uk-grid-item-match uk-width-2-5@m uk-visible@m">
-        <div className="uk-card-primary uk-card uk-card-body uk-padding-remove uk-flex uk-flex-column">    
-        
-            
-            
-            
-                
-                    
-<div className="uk-flex-1 uk-flex uk-margin uk-visible@m">
-        <picture><img className="el-image" style={{ aspectRatio: "auto" }} width="1200" height="1200" src={c.m("s.5.1.3.1.1.1.0.img", "/images/assets/heros/hero-g06.jpg")} alt={c.a("s.5.1.3.1.1.1.0.img", "Instructor explaining cable connections to a femail Electrician Trainee in class")} /></picture>    
-    
-</div>
-                
-            
-        
-        </div>    
-</div>
-    
-</div>
-                
-            
-        
-    
-</div>
-<div id="page#3" className="uk-section-default uk-section">
-    
-        
-        
-        
-            
-                                <div className="uk-container">                
-                    
-<div className="uk-grid-margin uk-container uk-container-small" id="page#2">
-        <div className="uk-grid tm-grid-expand uk-child-width-1-1">    
-        
-<div className="uk-width-1-1">
-    
-        
-            
-            
-            
-                
-                    <div className="uk-panel uk-text-lead uk-margin-bottom" id="page#0"><div>
-<h1 className="elHead">{c.t("s.7.1.1.1.1.1.0.1.h1", "General Information")}</h1>
-</div></div>
-<div className="uk-accordion-default uk-margin-remove-top uk-width-2xlarge uk-margin-auto" uk-accordion="collapsible: true;" id="page#1">
-        
+</PageHero>
+<FaqSection c={c} headingKey="s.7.1.1.1.1.1.0.1.h1">        
 <div className="el-item">
     <a className="el-title uk-accordion-title" href="" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.7.1.1.1.1.3.1.1.a", "What is the Intelligent Transportation Systems (ITS) Apprenticeship? <span uk-accordion-icon></span>") }} />
 
@@ -219,75 +134,10 @@ export default async function Page() {
     
     </div>
 </div>    
-</div>
-                
-            
-        
-    
-</div>
-        </div>    
-</div>
-                                </div>                
-            
-        
-    
-</div>
-<div className="uk-section-primary uk-section">
-    
-        
-        
-        
-            
-                
-                    
-<div className="uk-grid-margin uk-container uk-container-small">
-        <div className="uk-grid tm-grid-expand" uk-grid="">    
-        
-<div className="uk-width-3-5@m">
-    
-        
-            
-            
-            
-                
-                    
-<h1 className="uk-text-left@m uk-text-center">
-    
-        
-                    {c.t("s.9.1.1.1.1.h1", "Are you Ready?")}        
-        
-    
-</h1><div className="uk-panel uk-text-lead uk-position-relative uk-margin uk-text-left@m uk-text-center" style={{ left: "3px", top: "-6px" }} data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.9.1.1.1.2.div", "Take the next step to the <br class=\"uk-hidden@s\">rest of your life.") }} />
-                
-            
-        
-    
-</div>
-<div className="uk-grid-item-match uk-flex-middle uk-width-2-5@m">
-    
-        
-            
-            
-                        <div className="uk-panel uk-width-1-1">            
-                
-                    
-<div id="page#4" className="uk-margin uk-text-right@m uk-text-center" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.9.1.1.3.1.1.div", "<a class=\"el-content uk-button uk-button-danger uk-button-large\" title=\"Tap here to get started.\" href=\"/applicants\">\n    \n        <span class=\"uk-visible@s\">Flip the Switch:</span> Get Started    \n    \n</a>") }} />
+</FaqSection>
+<ReadyCta c={c} section="s.9" panelId={4} />
 
                 
-                        </div>            
-        
-    
-</div>
-        </div>    
-</div>
-                
             
-        
-    
-</div>
-
-                
-            </main>
-    </>
-  );
-}
+  </>
+));

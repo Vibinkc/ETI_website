@@ -1,58 +1,26 @@
-import type { Metadata } from "next";
-import { getContent, pageMetadata } from "@/lib/content";
+import { definePage, metadataFor } from "@/lib/page";
+import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 
 const ROUTE = "/electrician-trainees/maintaining-your-et-card";
 
 // re-rendered on demand when the CMS publishes this page
 export const revalidate = 3600;
 
-export async function generateMetadata(): Promise<Metadata> {
-  return pageMetadata(ROUTE, "Maintaining Your ET Card - Electrical Training Institute", undefined);
-}
+export const generateMetadata = metadataFor(ROUTE, "Maintaining Your ET Card - Electrical Training Institute", undefined);
 
-export default async function Page() {
-  const c = await getContent(ROUTE);
-  return (
-    <>
-<main id="tm-main">
-
-                
-                <div id="system-message-container" aria-live="polite"></div>
+export default definePage(ROUTE, (c) => (
+  <>
 
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0 .el-content{line-height: 1.4em;padding: 10px;}#page\\#1 .el-content{line-height: 1.4em;padding: 10px;}#page\\#2 .uk-tile{padding:50px;}" }} />
-<div className="uk-section uk-padding-remove-vertical">
-    
-        
-        
-        
-            
-                
-                    
-<div className="uk-grid-margin-large uk-grid tm-grid-expand uk-grid-column-collapse uk-grid-row-large" uk-grid="">
-    
-        
-<div className="uk-grid-item-match uk-width-3-5@m">
-        <div className="uk-card-primary uk-card uk-card-body">    
-        
+<PageHero c={c} image={{ imgKey: "s.5.1.3.1.1.1.0.img", src: "/images/assets/heros/hero-wm04.jpg", alt: "Electrician Trainee on a roof about to use a ladder to get down.", width: "1200", height: "1200", aspectAuto: true }}>        
             
             
             
                 
                     
 
-<nav aria-label="Breadcrumb" className="uk-margin-small-bottom">
-    <ul className="uk-breadcrumb uk-margin-remove-bottom" vocab="https://schema.org/" typeof="BreadcrumbList">
-    
-            <li property="itemListElement" typeof="ListItem">            <a href="/" property="item" typeof="WebPage" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.5.1.1.1.1.1.1.1.a", "<span property=\"name\">Home</span>") }} />
-            <meta property="position" content="1" />
-            </li>    
-            <li property="itemListElement" typeof="ListItem">            <a href="/electrician-trainees" property="item" typeof="WebPage" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.5.1.1.1.1.1.3.1.a", "<span property=\"name\">Electrician Trainees</span>") }} />
-            <meta property="position" content="2" />
-            </li>    
-            <li property="itemListElement" typeof="ListItem">            <span property="name" aria-current="page">{c.t("s.5.1.1.1.1.1.5.1.span", "Maintaining Your ET Card")}</span>            <meta property="position" content="3" />
-            </li>    
-    </ul>
-</nav>
+<Breadcrumb c={c} keyBase="s.5.1.1.1.1.1" links={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/electrician-trainees", html: "<span property=\"name\">Electrician Trainees</span>" }]} current="Maintaining Your ET Card" />
 
 <h1 className="uk-heading-medium uk-margin-large-bottom">
     
@@ -71,32 +39,7 @@ export default async function Page() {
                 
             
         
-        </div>    
-</div>
-<div className="uk-grid-item-match uk-width-2-5@m uk-visible@m">
-        <div className="uk-card-primary uk-card uk-card-body uk-padding-remove uk-flex uk-flex-column">    
-        
-            
-            
-            
-                
-                    
-<div className="uk-flex-1 uk-flex uk-margin uk-visible@m">
-        <picture><img className="el-image" style={{ aspectRatio: "auto" }} width="1200" height="1200" src={c.m("s.5.1.3.1.1.1.0.img", "/images/assets/heros/hero-wm04.jpg")} alt={c.a("s.5.1.3.1.1.1.0.img", "Electrician Trainee on a roof about to use a ladder to get down.")} /></picture>    
-    
-</div>
-                
-            
-        
-        </div>    
-</div>
-    
-</div>
-                
-            
-        
-    
-</div>
+</PageHero>
 <div className="uk-section-default uk-section uk-section-medium-top uk-section-xsmall-bottom">
     
         
@@ -271,7 +214,6 @@ export default async function Page() {
 </div>
 
                 
-            </main>
-    </>
-  );
-}
+            
+  </>
+));

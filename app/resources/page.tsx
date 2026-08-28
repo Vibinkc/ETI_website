@@ -1,23 +1,14 @@
-import type { Metadata } from "next";
-import { getContent, pageMetadata } from "@/lib/content";
+import { definePage, metadataFor } from "@/lib/page";
 
 const ROUTE = "/resources";
 
 // re-rendered on demand when the CMS publishes this page
 export const revalidate = 3600;
 
-export async function generateMetadata(): Promise<Metadata> {
-  return pageMetadata(ROUTE, "Resources - Electrical Training Institute", undefined);
-}
+export const generateMetadata = metadataFor(ROUTE, "Resources - Electrical Training Institute", undefined);
 
-export default async function Page() {
-  const c = await getContent(ROUTE);
-  return (
-    <>
-<main id="tm-main">
-
-                
-                <div id="system-message-container" aria-live="polite"></div>
+export default definePage(ROUTE, (c) => (
+  <>
 
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0{margin-top:7%;}#page\\#1 div.logoSM .el-image{height:90px; width: auto}#page\\#1 div.logoM .el-image{height:100px; width: auto}" }} />
 <div className="uk-section uk-padding-remove-vertical">
@@ -390,6 +381,12 @@ export default async function Page() {
 </div></div>
                 <div>
 <div className="el-item uk-flex uk-flex-column">
+{/* This one link stays on http. calapprenticeship.org serves https, but the
+    certificate it presents is self-signed and expired in October 2021, so
+    switching the scheme gives every visitor a browser interstitial instead of
+    the site. Nothing here can fix that -- it needs a new certificate from
+    them. Checked 2026-08-28; worth retrying, and the moment https loads
+    cleanly this should change. */}
         <a className="uk-card-hover uk-flex-1 uk-card uk-card-overlay uk-card-small uk-flex uk-flex-column uk-flex-middle uk-card-body uk-margin-remove-first-child uk-link-toggle" href="http://www.calapprenticeship.org/" target="_blank" rel="noreferrer">    
         
             
@@ -575,7 +572,6 @@ export default async function Page() {
 </div>
 
                 
-            </main>
-    </>
-  );
-}
+            
+  </>
+));

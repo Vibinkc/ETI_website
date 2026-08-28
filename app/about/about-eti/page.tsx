@@ -1,23 +1,15 @@
-import type { Metadata } from "next";
-import { getContent, pageMetadata } from "@/lib/content";
+import { definePage, metadataFor } from "@/lib/page";
+import ReadyCta from "@/components/ReadyCta";
 
 const ROUTE = "/about/about-eti";
 
 // re-rendered on demand when the CMS publishes this page
 export const revalidate = 3600;
 
-export async function generateMetadata(): Promise<Metadata> {
-  return pageMetadata(ROUTE, "About ETI - Electrical Training Institute", undefined);
-}
+export const generateMetadata = metadataFor(ROUTE, "About ETI - Electrical Training Institute", undefined);
 
-export default async function Page() {
-  const c = await getContent(ROUTE);
-  return (
-    <>
-<main id="tm-main">
-
-                
-                <div id="system-message-container" aria-live="polite"></div>
+export default definePage(ROUTE, (c) => (
+  <>
 
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0{text-transform: uppercase;}#page\\#1 .el-content{font-weight:bold;font-size:105%;}" }} />
 <div className="uk-section uk-padding-remove-vertical">
@@ -116,62 +108,9 @@ export default async function Page() {
         
     
 </div>
-<div className="uk-section-primary uk-section">
-    
-        
-        
-        
-            
-                
-                    
-<div className="uk-grid-margin uk-container uk-container-small">
-        <div className="uk-grid tm-grid-expand" uk-grid="">    
-        
-<div className="uk-width-3-5@m">
-    
-        
-            
-            
-            
-                
-                    
-<h1 className="uk-text-left@m uk-text-center">
-    
-        
-                    {c.t("s.9.1.1.1.1.h1", "Are you Ready?")}        
-        
-    
-</h1><div className="uk-panel uk-text-lead uk-position-relative uk-margin uk-text-left@m uk-text-center" style={{ left: "3px", top: "-6px" }} data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.9.1.1.1.2.div", "Take the next step to the <br class=\"uk-hidden@s\">rest of your life.") }} />
-                
-            
-        
-    
-</div>
-<div className="uk-grid-item-match uk-flex-middle uk-width-2-5@m">
-    
-        
-            
-            
-                        <div className="uk-panel uk-width-1-1">            
-                
-                    
-<div id="page#1" className="uk-margin uk-text-right@m uk-text-center" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.9.1.1.3.1.1.div", "<a class=\"el-content uk-button uk-button-danger uk-button-large\" title=\"Tap here to get started.\" href=\"/applicants\">\n    \n        <span class=\"uk-visible@s\">Flip the Switch:</span> Get Started    \n    \n</a>") }} />
+<ReadyCta c={c} section="s.9" panelId={1} />
 
                 
-                        </div>            
-        
-    
-</div>
-        </div>    
-</div>
-                
             
-        
-    
-</div>
-
-                
-            </main>
-    </>
-  );
-}
+  </>
+));
