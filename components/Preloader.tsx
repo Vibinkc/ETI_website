@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const MAX_WAIT_MS = 1800;
 /** Long enough that the cover reads as intentional rather than a flicker. */
 const MIN_SHOW_MS = 400;
-/** Must match the fade in eti-preloader.css. */
+/** Must match the fade in components/preloaderCss.ts. */
 const FADE_MS = 450;
 
 /**

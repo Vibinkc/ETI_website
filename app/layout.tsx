@@ -4,12 +4,12 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import PageShell from "@/components/PageShell";
 import Preloader from "@/components/Preloader";
+import { PRELOADER_CSS } from "@/components/preloaderCss";
 import RichTextLinks from "@/components/RichTextLinks";
 import SignUpForm from "@/components/SignUpForm";
 import SiteScripts from "@/components/SiteScripts";
 import { GLOBAL_ROUTE, getContentData } from "@/lib/content";
 import "./globals.css";
-import "./eti-preloader.css";
 import "./eti-3d-hero.css";
 
 export const metadata: Metadata = {
@@ -29,6 +29,10 @@ export default async function RootLayout({
   return (
     <html lang="en-gb" dir="ltr">
       <body>
+        {/* Inlined, not imported: a stylesheet is a request later than the HTML,
+            and until it lands the cover is an unstyled div while the page behind
+            it is already painted. See components/preloaderCss.ts. */}
+        <style>{PRELOADER_CSS}</style>
         <link rel="stylesheet" href="/media/vendor/awesomplete/css/awesompletea714.css?1.1.7" precedence="default" />
         <link rel="stylesheet" href="/media/vendor/joomla-custom-elements/css/joomla-alert.mineeda.css?0.4.1" precedence="default" />
         <link rel="stylesheet" href="/media/system/css/joomla-fontawesome.min9de8.css?5.0.40" precedence="default" />
