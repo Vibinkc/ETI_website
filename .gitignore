@@ -45,3 +45,7 @@ Dockerfile
 docker-compose.yml
 .dockerignore
 .github/
+
+# Python bytecode from the build tools
+__pycache__/
+*.pyc

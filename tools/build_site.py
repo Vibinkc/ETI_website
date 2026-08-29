@@ -230,15 +230,47 @@ HOME_RULE = '#module-117\\#1{height: 210px;}'
 had_home_rule = HOME_RULE in header_html
 header_jsx = header_jsx.replace(json.dumps(HOME_RULE)[1:-1], '')
 
-LOGO_RE = re.compile(r'(<img[^>]*ETI_logo\.svg[^>]*?)width="275" height="186"')
-header_jsx, n_logo = LOGO_RE.subn(
-    r'\1width={isHome ? 275 : 150} height={isHome ? 186 : 102}', header_jsx)
+# Match the whole <img> in one unbounded run, then pick it apart in Python.
+# Two [^>]* runs either side of a literal have to backtrack across the tag
+# every time the literal turns out not to be there.
+IMG_RE = re.compile(r'<img[^>]*>')
+LOGO_SIZE = 'width="275" height="186"'
+LOGO_SIZE_JSX = 'width={isHome ? 275 : 150} height={isHome ? 186 : 102}'
+
+n_logo = 0
+
+
+def size_logo(match):
+    """Make the logo's dimensions depend on which page is rendering."""
+    global n_logo
+    tag = match.group(0)
+    if 'ETI_logo.svg' not in tag or LOGO_SIZE not in tag:
+        return tag
+    n_logo += 1
+    return tag.replace(LOGO_SIZE, LOGO_SIZE_JSX)
+
+
+header_jsx = IMG_RE.sub(size_logo, header_jsx)
 
 # --- footer share links follow the current page ----------------------------
-SHARE_RE = re.compile(r'href="([^"]*?)https%3A%2F%2Fetiedu\.org%2F([^"]*)"')
-footer_jsx, n_share = SHARE_RE.subn(
-    lambda m: 'href={"%s" + shareUrl + "%s"}' % (m.group(1), m.group(2)),
-    footer_jsx)
+# Same reasoning: one run for the attribute, then str.partition for the marker.
+HREF_RE = re.compile(r'href="([^"]*)"')
+SHARE_MARKER = 'https%3A%2F%2Fetiedu.org%2F'
+
+n_share = 0
+
+
+def share_url(match):
+    """Point a share link at whichever page is rendering."""
+    global n_share
+    before, found, after = match.group(1).partition(SHARE_MARKER)
+    if not found:
+        return match.group(0)
+    n_share += 1
+    return 'href={"%s" + shareUrl + "%s"}' % (before, after)
+
+
+footer_jsx = HREF_RE.sub(share_url, footer_jsx)
 
 write(os.path.join(COMP, 'Header.tsx'), '''"use client";
 

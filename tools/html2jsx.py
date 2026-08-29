@@ -188,8 +188,11 @@ class Rewriter:
         self.unresolved.add(joined)
         return '/' + joined
 
+    # The ../ run is bounded. Unbounded, a long string of them with no asset
+    # folder after has to be retried at every possible count before the match
+    # can fail. Nothing in the mirror nests anywhere near eight levels up.
     ASSET_RE = re.compile(
-        r'(?<![/\w.-])((?:\.\./)*(?:images|media|templates|plugins)/[^"\'\s,)\\]+)')
+        r'(?<![/\w.-])((?:\.\./){0,8}(?:images|media|templates|plugins)/[^"\'\s,)\\]+)')
 
     def assets_in(self, text):
         """Rewrite every mirror asset path inside a blob (JSON, CSS, srcset)."""
