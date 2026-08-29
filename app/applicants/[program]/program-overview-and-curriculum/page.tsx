@@ -1,4 +1,4 @@
-import { PROGRAMME_OVERVIEWS } from "@/components/applicants/ProgrammeOverviews";
+import { PROGRAMME_OVERVIEWS } from "@/components/applicants/bodies";
 import { programmePage } from "@/lib/programme-page";
 
 const page = programmePage(
