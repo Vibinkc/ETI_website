@@ -108,13 +108,12 @@ export default definePage(ROUTE, (c) => (
 </div></div>
                 <div>
 <div className="el-item uk-flex uk-flex-column">
-{/* This one link stays on http. calapprenticeship.org serves https, but the
-    certificate it presents is self-signed and expired in October 2021, so
-    switching the scheme gives every visitor a browser interstitial instead of
-    the site. Nothing here can fix that -- it needs a new certificate from
-    them. Checked 2026-08-28; worth retrying, and the moment https loads
-    cleanly this should change. */}
-        <a className="uk-card-hover uk-flex-1 uk-card uk-card-overlay uk-card-small uk-flex uk-flex-column uk-flex-middle uk-card-body uk-margin-remove-first-child uk-link-toggle" href="http://www.calapprenticeship.org/" target="_blank" rel="noreferrer">    
+{/* calapprenticeship.org is linked over https at the site owner's direction.
+    Be aware their certificate is self-signed and expired in October 2021, so
+    until they replace it this link lands on a browser security warning rather
+    than their site. Only they can fix that. Re-checked 2026-08-29 -- if https
+    ever loads cleanly, this note can go. */}
+        <a className="uk-card-hover uk-flex-1 uk-card uk-card-overlay uk-card-small uk-flex uk-flex-column uk-flex-middle uk-card-body uk-margin-remove-first-child uk-link-toggle" href="https://www.calapprenticeship.org/" target="_blank" rel="noreferrer">    
         <picture><img className="el-image" width="212" height="67" src={c.m("s.7.1.3.1.1.1.17.1.1.1.0.img", "/images/assets/logos/cal-apprenticeship-logo.png")} alt={c.a("s.7.1.3.1.1.1.17.1.1.1.0.img", "Cal Apprenticeship logo")} /></picture>
                 <div className="el-content uk-panel uk-text-small uk-text-left uk-margin-top uk-margin-auto-bottom">{c.t("s.7.1.3.1.1.1.17.1.1.3.div", "Promotes apprenticeship opportunities across California and helps connect prospective apprentices with state-registered training programs.")}</div>        
                 <div className="uk-margin-top"><div className="el-link uk-button uk-button-text">{c.t("s.7.1.3.1.1.1.17.1.1.5.0.div", "calapprenticeship.org")}</div></div>        
