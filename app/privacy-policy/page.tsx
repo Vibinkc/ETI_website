@@ -28,14 +28,21 @@ export default async function Page() {
             <h2 className="uk-h5 uk-text-uppercase">On this page</h2>
             <ul className="uk-list uk-list-disc">
               <li><a href={"#who-we-are"}>{c.t("pp.who-we-are.h2", "Who we are")}</a></li>
+              <li><a href={"#scope"}>{c.t("pp.scope.h2", "What this policy covers")}</a></li>
               <li><a href={"#what-we-collect"}>{c.t("pp.what-we-collect.h2", "What we collect")}</a></li>
+              <li><a href={"#how-we-collect"}>{c.t("pp.how-we-collect.h2", "How we collect it")}</a></li>
               <li><a href={"#why"}>{c.t("pp.why.h2", "Why we collect it")}</a></li>
+              <li><a href={"#legal-basis"}>{c.t("pp.legal-basis.h2", "Legal basis, if you are in the UK or EEA")}</a></li>
               <li><a href={"#voluntary"}>{c.t("pp.voluntary.h2", "Information you do not have to give")}</a></li>
               <li><a href={"#sharing"}>{c.t("pp.sharing.h2", "Who we share it with")}</a></li>
               <li><a href={"#retention"}>{c.t("pp.retention.h2", "How long we keep it")}</a></li>
               <li><a href={"#security"}>{c.t("pp.security.h2", "How we protect it")}</a></li>
               <li><a href={"#rights"}>{c.t("pp.rights.h2", "Your rights")}</a></li>
+              <li><a href={"#california"}>{c.t("pp.california.h2", "If you live in California")}</a></li>
+              <li><a href={"#other-states"}>{c.t("pp.other-states.h2", "If you live in another US state")}</a></li>
               <li><a href={"#cookies"}>{c.t("pp.cookies.h2", "Cookies and this website")}</a></li>
+              <li><a href={"#other-sites"}>{c.t("pp.other-sites.h2", "Links to other websites")}</a></li>
+              <li><a href={"#international"}>{c.t("pp.international.h2", "If you are visiting from outside the United States")}</a></li>
               <li><a href={"#children"}>{c.t("pp.children.h2", "Children")}</a></li>
               <li><a href={"#changes"}>{c.t("pp.changes.h2", "Changes to this policy")}</a></li>
               <li><a href={"#contact"}>{c.t("pp.contact.h2", "How to contact us")}</a></li>
@@ -45,13 +52,25 @@ export default async function Page() {
           <h2 className="uk-h3">{c.t("pp.who-we-are.h2", "Who we are")}</h2>
           <div data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("pp.who-we-are.body", "<p>This website is operated by the Electrical Training Institute (ETI), the trade name of the San Diego Electrical Training Trust, which administers the apprenticeship programs of the San Diego Electrical Joint Apprenticeship and Training Committees (JATC).</p><p>Our office is at 4675 Viewridge Avenue, San Diego, CA 92123. This policy covers the information collected through <strong>etiedu.org</strong>. It does not cover the separate systems we link to \u2014 TradeSchool, Moodle, the Learning Management System, the eBooks library or the ETI Store \u2014 each of which has its own operator and its own privacy terms.</p>") }} />
         </section>
+        <section id={"scope"} className="uk-margin-large-bottom">
+          <h2 className="uk-h3">{c.t("pp.scope.h2", "What this policy covers")}</h2>
+          <div data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("pp.scope.body", "<p>This policy covers <strong>etiedu.org</strong> — the pages on this site, the forms on it, and the enquiries you send us through it.</p><p>It does not cover:</p><ul class=\"uk-list uk-list-disc\"><li>Records the Electrical Training Institute holds about apprentices and students as a training programme. Those are governed by the apprenticeship standards and the agreements you sign when you enrol, not by this policy.</li><li>Other organisations' systems we link you to, such as the online application portal, Moodle, the Electrical Training Alliance's learning site and its ebooks library. Each of those has its own privacy policy, and once you are on one of them you are dealing with that organisation.</li></ul>") }} />
+        </section>
         <section id={"what-we-collect"} className="uk-margin-large-bottom">
           <h2 className="uk-h3">{c.t("pp.what-we-collect.h2", "What we collect")}</h2>
           <div data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("pp.what-we-collect.body", "<p>The only form on this website is the <a href=\"/sign-up\">Get Started</a> form. When you complete it, we receive:</p><ul class=\"uk-list uk-list-disc\"><li><strong>Who you are</strong> \u2014 first and last name, and your age range.</li><li><strong>How to reach you</strong> \u2014 telephone number, email address, and street address, city, state and ZIP code.</li><li><strong>What you are interested in</strong> \u2014 the program you are asking about, and how you heard about us.</li><li><strong>Demographic information</strong> \u2014 gender and race or ethnicity, including anything you type into the &ldquo;self describe&rdquo; or &ldquo;other ethnicity&rdquo; boxes. Answering these is voluntary.</li></ul><p>We do not record your IP address or browser details alongside your answers, and we do not buy personal information about you from anyone else.</p><p>Later in the application process \u2014 which happens off this website \u2014 the JATC also collects school transcripts, aptitude test results, interview notes, a driver&rsquo;s licence, a DD-214 where you are a veteran, and the result of a drug screen. Those are described in the <a href=\"/images/pdf/Rules-regs.pdf\" target=\"_blank\">Rules, Regulations and Guidelines</a>.</p>") }} />
         </section>
+        <section id={"how-we-collect"} className="uk-margin-large-bottom">
+          <h2 className="uk-h3">{c.t("pp.how-we-collect.h2", "How we collect it")}</h2>
+          <div data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("pp.how-we-collect.body", "<p>Two ways, and no others.</p><ul class=\"uk-list uk-list-disc\"><li><strong>You give it to us.</strong> Everything personal we hold from this site comes from a form you chose to fill in — the sign-up form or the contact form — or from an email or call you started.</li><li><strong>Our web server records the request.</strong> Like any web server, it logs the address your browser connected from, which page was asked for and when. That happens for every visitor and is used to keep the site working and secure.</li></ul><p>We do not buy personal information, and we do not receive it from data brokers, advertising networks or social media companies.</p>") }} />
+        </section>
         <section id={"why"} className="uk-margin-large-bottom">
           <h2 className="uk-h3">{c.t("pp.why.h2", "Why we collect it")}</h2>
           <div data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("pp.why.body", "<ul class=\"uk-list uk-list-disc\"><li>To answer your enquiry and tell you about the program you asked about.</li><li>To process and assess an application to a program.</li><li>To meet the record-keeping and equal-opportunity obligations that apply to registered apprenticeship programs, principally 29 CFR part 30, which requires us to keep records identifiable by race, ethnicity, sex and disability status.</li><li>To improve the programs and services we offer.</li></ul><p>We do not sell your personal information, and we do not share it with anyone for their own advertising.</p>") }} />
+        </section>
+        <section id={"legal-basis"} className="uk-margin-large-bottom">
+          <h2 className="uk-h3">{c.t("pp.legal-basis.h2", "Legal basis, if you are in the UK or EEA")}</h2>
+          <div data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("pp.legal-basis.body", "<p>This is a San Diego training programme and our visitors are almost all local. If you are covered by UK or EU data protection law, the grounds we rely on are:</p><ul class=\"uk-list uk-list-disc\"><li><strong>Your consent</strong> — you filled in a form and sent it to us. You can withdraw it by asking us to delete what you sent.</li><li><strong>Our legitimate interests</strong> — keeping the site running and secure, and answering the enquiries people send us.</li><li><strong>A legal obligation</strong> — the equal-opportunity reporting that federal apprenticeship rules require of us.</li></ul>") }} />
         </section>
         <section id={"voluntary"} className="uk-margin-large-bottom">
           <h2 className="uk-h3">{c.t("pp.voluntary.h2", "Information you do not have to give")}</h2>
@@ -73,9 +92,25 @@ export default async function Page() {
           <h2 className="uk-h3">{c.t("pp.rights.h2", "Your rights")}</h2>
           <div data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("pp.rights.body", "<p>If you live in California, the California Consumer Privacy Act gives you the right to:</p><ul class=\"uk-list uk-list-disc\"><li>know what personal information we hold about you;</li><li>receive a copy of it, or ask us to correct it if it is wrong;</li><li>ask us to delete it, except where we are legally required to keep it \u2014 apprenticeship records we must retain are an example;</li><li>not be treated differently for exercising any of these rights.</li></ul><p>We do not sell or share personal information as those terms are defined by the CCPA, so there is nothing for you to opt out of.</p><p>To make a request, contact us using the details below. We will ask for enough information to confirm who you are before we act, and we will respond within the time the law allows.</p>") }} />
         </section>
+        <section id={"california"} className="uk-margin-large-bottom">
+          <h2 className="uk-h3">{c.t("pp.california.h2", "If you live in California")}</h2>
+          <div data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("pp.california.body", "<p>California law gives you the right to know what personal information we hold about you, to get a copy of it, to have it corrected, and to have it deleted. You can exercise any of these by contacting us; we may need to check who you are before we act, and we will not treat you differently for asking.</p><p>Two things California law asks us to be explicit about:</p><ul class=\"uk-list uk-list-disc\"><li><strong>We do not sell your personal information, and we do not share it for cross-context behavioural advertising.</strong> There is no advertising on this site and no advertising network is given anything.</li><li><strong>Sensitive personal information.</strong> The sign-up form asks about race, ethnicity and gender. That is sensitive information under California law. We use it for one purpose only — the equal-opportunity reporting federal apprenticeship rules require — and never to decide who is offered a place. Because we do not use it for anything beyond that permitted purpose, there is nothing to limit; but you can leave those questions blank, and you can ask us to delete what you have already given.</li></ul>") }} />
+        </section>
+        <section id={"other-states"} className="uk-margin-large-bottom">
+          <h2 className="uk-h3">{c.t("pp.other-states.h2", "If you live in another US state")}</h2>
+          <div data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("pp.other-states.body", "<p>Several states — Virginia, Colorado, Connecticut, Utah and others — give residents rights much like California's: to see what we hold, correct it, delete it, get a copy, and appeal if we turn a request down. Contact us and we will handle your request under whichever law applies to you.</p><p>Some of those laws also give a right to opt out of targeted advertising and of profiling that makes decisions about you. Neither happens here: we run no advertising, and nothing on this site profiles you or decides anything about you automatically.</p>") }} />
+        </section>
         <section id={"cookies"} className="uk-margin-large-bottom">
           <h2 className="uk-h3">{c.t("pp.cookies.h2", "Cookies and this website")}</h2>
           <div data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("pp.cookies.body", "<p>This website uses only the cookies needed to make pages work. We do not use advertising cookies and we do not track you across other websites.</p><p>Pages here embed video from YouTube and link to social media platforms. When a page loads an embedded video, or when you follow a link to Facebook, X, Instagram, YouTube, LinkedIn, Bluesky or Mastodon, that company may set its own cookies and receive data about your visit under its own privacy policy, which we do not control.</p>") }} />
+        </section>
+        <section id={"other-sites"} className="uk-margin-large-bottom">
+          <h2 className="uk-h3">{c.t("pp.other-sites.h2", "Links to other websites")}</h2>
+          <div data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("pp.other-sites.body", "<p>This site links out to places we do not run — the online application portal, Moodle, the Electrical Training Alliance's learning site and ebooks library, NECA San Diego, Union Plus, and our pages on Facebook, Instagram, X and YouTube.</p><p>Some pages also embed a YouTube video. Nothing is sent to YouTube until you press play, but once you do, YouTube can set its own cookies and will know you watched it.</p><p>We are not responsible for what any of those sites do with your information. When you follow a link or press play, their privacy policy takes over from ours.</p>") }} />
+        </section>
+        <section id={"international"} className="uk-margin-large-bottom">
+          <h2 className="uk-h3">{c.t("pp.international.h2", "If you are visiting from outside the United States")}</h2>
+          <div data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("pp.international.body", "<p>We are in San Diego, and this website and its database are hosted in the United States. If you send us something from another country, it will be stored and handled here, under United States law, which may protect it differently from the law where you live.</p>") }} />
         </section>
         <section id={"children"} className="uk-margin-large-bottom">
           <h2 className="uk-h3">{c.t("pp.children.h2", "Children")}</h2>
