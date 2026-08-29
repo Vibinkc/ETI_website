@@ -37,7 +37,7 @@ export default function SectionLinkCards({
 <div className="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
 <div className="uk-width-1-1">
 <div id={panelId} className="uk-margin uk-width-2xlarge uk-margin-auto uk-text-center">
-        <div className={grid} uk-grid="">                {cards.map((card, i) => (
+        <div className={grid} {...{ "uk-grid": "" }}>                {cards.map((card, i) => (
                 <div key={card.href}>
 <div className="el-item uk-flex uk-flex-column">
         <Link className={linkClass} href={card.href}>

@@ -27,17 +27,17 @@ export default function Footer({ content }: { content: ContentData }) {
 <div className="uk-text-lead uk-text-center">
                     {c.t("ftr.3.1.1.1.1.1.1.1.div", "Share Us")}        
 </div>
-<div className="uk-margin uk-text-center">    <ul className="uk-child-width-auto uk-grid-small uk-flex-inline uk-flex-middle" uk-grid="">
+<div className="uk-margin uk-text-center">    <ul className="uk-child-width-auto uk-grid-small uk-flex-inline uk-flex-middle" {...{ "uk-grid": "" }}>
             <li className="el-item">
-<a className="el-link uk-icon-button" href={"https://www.facebook.com/sharer/sharer.php?u=" + shareUrl + ""} title="Tap to visit our Facebook page. Opens in new window." rel="noreferrer" target="_blank" aria-label="Tap to visit our Facebook page. Opens in new window."><span uk-icon="icon: facebook;"></span></a></li>
+<a className="el-link uk-icon-button" href={"https://www.facebook.com/sharer/sharer.php?u=" + shareUrl + ""} title="Tap to visit our Facebook page. Opens in new window." rel="noreferrer" target="_blank" aria-label="Tap to visit our Facebook page. Opens in new window."><span {...{ "uk-icon": "icon: facebook;" }}></span></a></li>
             <li className="el-item">
-<a className="el-link uk-icon-button" href={"https://www.linkedin.com/sharing/share-offsite/?url=" + shareUrl + ""} title="Tap to visit our LinkedIn page. Opens in new window." rel="noreferrer" target="_blank" aria-label="Tap to visit our LinkedIn page. Opens in new window."><span uk-icon="icon: linkedin;"></span></a></li>
+<a className="el-link uk-icon-button" href={"https://www.linkedin.com/sharing/share-offsite/?url=" + shareUrl + ""} title="Tap to visit our LinkedIn page. Opens in new window." rel="noreferrer" target="_blank" aria-label="Tap to visit our LinkedIn page. Opens in new window."><span {...{ "uk-icon": "icon: linkedin;" }}></span></a></li>
             <li className="el-item">
-<a className="el-link uk-icon-button" href={"https://bsky.app/intent/compose?text=%0A" + shareUrl + ""} title="Tap to visit our Bluesky page. Opens in new window." rel="noreferrer" target="_blank" aria-label="Tap to visit our Bluesky page. Opens in new window."><span uk-icon="icon: bluesky;"></span></a></li>
+<a className="el-link uk-icon-button" href={"https://bsky.app/intent/compose?text=%0A" + shareUrl + ""} title="Tap to visit our Bluesky page. Opens in new window." rel="noreferrer" target="_blank" aria-label="Tap to visit our Bluesky page. Opens in new window."><span {...{ "uk-icon": "icon: bluesky;" }}></span></a></li>
             <li className="el-item">
-<a className="el-link uk-icon-button" href={"https://mastodon.social/share?url=" + shareUrl + "&text="} title="Tap to visit our Mastodon page. Opens in new window." rel="noreferrer" target="_blank" aria-label="Tap to visit our Mastodon page. Opens in new window."><span uk-icon="icon: mastodon;"></span></a></li>
+<a className="el-link uk-icon-button" href={"https://mastodon.social/share?url=" + shareUrl + "&text="} title="Tap to visit our Mastodon page. Opens in new window." rel="noreferrer" target="_blank" aria-label="Tap to visit our Mastodon page. Opens in new window."><span {...{ "uk-icon": "icon: mastodon;" }}></span></a></li>
             <li className="el-item">
-<a className="el-link uk-icon-button" href={"https://x.com/intent/post?url=" + shareUrl + "&text="} title="Tap to visit our X page. Opens in new window." rel="noreferrer" target="_blank" aria-label="Tap to visit our X page. Opens in new window."><span uk-icon="icon: x;"></span></a></li>
+<a className="el-link uk-icon-button" href={"https://x.com/intent/post?url=" + shareUrl + "&text="} title="Tap to visit our X page. Opens in new window." rel="noreferrer" target="_blank" aria-label="Tap to visit our X page. Opens in new window."><span {...{ "uk-icon": "icon: x;" }}></span></a></li>
     </ul></div>
 </div>
 </div>
@@ -48,13 +48,13 @@ export default function Footer({ content }: { content: ContentData }) {
 </div>
 <div id="footer#19" className="uk-section-muted uk-section uk-section-medium-top uk-section-small-bottom">
                                 <div className="uk-container">                
-<div className="uk-grid-margin uk-grid tm-grid-expand uk-grid-divider" uk-grid="">
+<div className="uk-grid-margin uk-grid tm-grid-expand uk-grid-divider" {...{ "uk-grid": "" }}>
 <div className="uk-width-1-2@m uk-flex-first@m">
                     <div className="uk-panel uk-margin">
-<div className="uk-grid-margin uk-grid tm-grid-expand" uk-grid="">
+<div className="uk-grid-margin uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>
 <div className="uk-width-2-3@s uk-width-2-3@m">
                     <div className="uk-panel uk-margin-medium-bottom">
-<div className="uk-grid-margin uk-grid tm-grid-expand" uk-grid="">
+<div className="uk-grid-margin uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>
 <div className="uk-width-1-2@s uk-width-1-2@m">
 <div className="uk-text-center">
         <Link className="el-link" href="/"><img className="el-image" loading="lazy" width="175" height="118" src={c.m("ftr.5.1.1.1.1.1.1.1.1.1.1.1.0.img", "/images/ETI_logo.svg")} alt={c.a("ftr.5.1.1.1.1.1.1.1.1.1.1.1.0.img", "Tap here to go to the home page.")} /></Link>    
@@ -63,7 +63,7 @@ export default function Footer({ content }: { content: ContentData }) {
 <div className="uk-width-1-2@s uk-width-1-2@m">
 <h3 className="uk-h6 uk-text-center" id="footer#0" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("ftr.5.1.1.1.1.1.1.1.1.3.1.h3", "<a href=\"/contact\" title=\"Tap here to visit our Contact page.\">Contact</a>") }} />
 <div id="footer#1" className="uk-margin uk-text-center">
-        <div className="uk-flex-middle uk-grid-small uk-child-width-auto uk-flex-center" uk-grid="">    
+        <div className="uk-flex-middle uk-grid-small uk-child-width-auto uk-flex-center" {...{ "uk-grid": "" }}>    
                 <div className="el-item" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("ftr.5.1.1.1.1.1.1.1.1.3.3.1.1.div", "<a class=\"el-content uk-button uk-button-text\" title=\"Tap here to call the main office.\" href=\"tel:8585696633\">\n    \n        (858) 569-6633    \n    \n</a>") }} />
                 <div className="el-item">
 <a className="el-content uk-button uk-button-text" title="Tap here to send us an email." href="mailto:info@sdett.org">
@@ -74,7 +74,7 @@ export default function Footer({ content }: { content: ContentData }) {
 </div>
 </div>
 </div></div><div className="uk-panel uk-margin">
-<div className="uk-grid-margin uk-grid tm-grid-expand" uk-grid="">
+<div className="uk-grid-margin uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>
 <div className="uk-width-1-2@s uk-width-1-2@m">
 <h3 className="uk-h6 uk-text-center" id="footer#2">
                     {c.t("ftr.5.1.1.1.1.1.1.2.1.1.1.h3", "Flip The Switch")}        
@@ -85,15 +85,15 @@ export default function Footer({ content }: { content: ContentData }) {
 <h3 className="uk-h6 uk-text-center" id="footer#3">
                     {c.t("ftr.5.1.1.1.1.1.1.2.1.3.1.h3", "Follow Us")}        
 </h3>
-<div className="uk-margin uk-text-center">    <ul className="uk-child-width-auto uk-grid-small uk-flex-inline uk-flex-middle" uk-grid="">
+<div className="uk-margin uk-text-center">    <ul className="uk-child-width-auto uk-grid-small uk-flex-inline uk-flex-middle" {...{ "uk-grid": "" }}>
             <li className="el-item">
-<a className="el-link uk-icon-link" href="https://www.facebook.com/ElectricalTrainingInstituteofSanDiegoandImperial/" aria-label="Tap here to visit our Facebook page. Opens in a new browser tab." target="_blank"><span uk-icon="icon: facebook;"></span></a></li>
+<a className="el-link uk-icon-link" href="https://www.facebook.com/ElectricalTrainingInstituteofSanDiegoandImperial/" aria-label="Tap here to visit our Facebook page. Opens in a new browser tab." target="_blank"><span {...{ "uk-icon": "icon: facebook;" }}></span></a></li>
             <li className="el-item">
-<a className="el-link uk-icon-link" href="https://x.com/ETI569" aria-label="Tap here to visit our X page. Opens in a new browser tab." target="_blank"><span uk-icon="icon: x;"></span></a></li>
+<a className="el-link uk-icon-link" href="https://x.com/ETI569" aria-label="Tap here to visit our X page. Opens in a new browser tab." target="_blank"><span {...{ "uk-icon": "icon: x;" }}></span></a></li>
             <li className="el-item">
-<a className="el-link uk-icon-link" href="https://www.instagram.com/electrical_training_institute/" aria-label="Tap here to visit our Instagram page. Opens in a new browser tab." target="_blank"><span uk-icon="icon: instagram;"></span></a></li>
+<a className="el-link uk-icon-link" href="https://www.instagram.com/electrical_training_institute/" aria-label="Tap here to visit our Instagram page. Opens in a new browser tab." target="_blank"><span {...{ "uk-icon": "icon: instagram;" }}></span></a></li>
             <li className="el-item">
-<a className="el-link uk-icon-link" href="https://www.youtube.com/channel/UCNRlTsqUWirC64upO0i8slg" aria-label="Tap here to visit our YouTube page. Opens in a new browser tab." target="_blank"><span uk-icon="icon: youtube;"></span></a></li>
+<a className="el-link uk-icon-link" href="https://www.youtube.com/channel/UCNRlTsqUWirC64upO0i8slg" aria-label="Tap here to visit our YouTube page. Opens in a new browser tab." target="_blank"><span {...{ "uk-icon": "icon: youtube;" }}></span></a></li>
     </ul></div>
 </div>
 </div></div>
@@ -112,7 +112,7 @@ export default function Footer({ content }: { content: ContentData }) {
                     {c.t("ftr.5.1.1.1.7.h3", "Our Partners")}        
 </h3><div className="uk-panel uk-margin-remove-top">
 <div className="uk-grid-margin uk-container uk-container-expand">
-        <div className="uk-grid tm-grid-expand uk-grid-column-medium" uk-grid="">    
+        <div className="uk-grid tm-grid-expand uk-grid-column-medium" {...{ "uk-grid": "" }}>    
 <div className="uk-grid-item-match uk-flex-middle uk-width-1-3@s">
                         <div className="uk-panel uk-width-1-1">            
 <div className="uk-margin uk-text-right@s uk-text-center">
@@ -139,7 +139,7 @@ export default function Footer({ content }: { content: ContentData }) {
 </div>
 <div className="uk-width-1-2@m uk-flex-first">
                     <div className="uk-panel uk-margin">
-<div className="uk-grid-margin uk-grid tm-grid-expand" uk-grid="">
+<div className="uk-grid-margin uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>
 <div className="uk-width-1-3@s uk-width-1-3@m">
 <h3 className="uk-h6 uk-text-center" id="footer#7" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("ftr.5.1.1.3.1.1.1.1.h3", "<a href=\"/applicants\" title=\"Tap here to visit our Applicants page.\">Applicants</a>") }} />
 <div id="footer#8" className="uk-text-left@m uk-text-center">
@@ -201,7 +201,7 @@ export default function Footer({ content }: { content: ContentData }) {
 <li className="el-item " data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("ftr.5.1.1.3.1.1.5.9.1.5.li", "<a class=\"uk-flex-left@m uk-flex-center el-link\" href=\"/privacy-policy\">\n    <span class=\"el-image\" uk-icon=\"icon: lock;\"></span>\n                    Privacy Policy\n</a>") }} />
                             </ul>
 </div>
-<div id="sticky-to-top" className="uk-margin"><a href="#" title="Tap to scroll to the top." uk-totop="" uk-scroll="" aria-label="Tap to scroll to the top."></a></div>
+<div id="sticky-to-top" className="uk-margin"><a href="#" title="Tap to scroll to the top." {...{ "uk-totop": "" }} {...{ "uk-scroll": "" }} aria-label="Tap to scroll to the top."></a></div>
 </div>
 </div></div>
 </div>

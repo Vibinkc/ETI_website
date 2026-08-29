@@ -12,7 +12,7 @@ export default definePage(ROUTE, (c) => (
   <>
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0{text-transform: uppercase;}#page\\#1 .el-content{font-weight:bold;font-size:105%;}" }} />
 <div className="uk-section uk-padding-remove-vertical">
-<div className="uk-grid-margin-large uk-grid tm-grid-expand uk-grid-column-collapse uk-grid-row-large" uk-grid="">
+<div className="uk-grid-margin-large uk-grid tm-grid-expand uk-grid-column-collapse uk-grid-row-large" {...{ "uk-grid": "" }}>
 <div className="uk-grid-item-match uk-width-3-5@m">
         <div className="uk-card-primary uk-card uk-card-large uk-card-body uk-flex uk-flex-middle">    
                         <div className="uk-panel uk-width-1-1">            

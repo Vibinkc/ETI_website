@@ -21,7 +21,7 @@ export default definePage(ROUTE, (c) => (
 <h2 className="elHead">{c.t("s.7.1.1.1.3.0.1.h2", "Curriculum")}</h2>
 </div></div><div className="uk-panel uk-text-large uk-margin-xsmall-bottom uk-text-center">{c.t("s.7.1.1.1.4.div", "Inside Wireman")}</div><div className="uk-panel uk-margin-remove-top uk-margin-large-bottom uk-text-center">{c.t("s.7.1.1.1.5.div", "(5-year program)")}</div>
 <div className="uk-margin">
-        <div className="uk-grid uk-child-width-1-1 uk-child-width-1-2@s uk-flex-center uk-grid-row-large uk-grid-match" uk-grid="">                <div>
+        <div className="uk-grid uk-child-width-1-1 uk-child-width-1-2@s uk-flex-center uk-grid-row-large uk-grid-match" {...{ "uk-grid": "" }}>                <div>
 <div className="el-item uk-panel uk-margin-remove-first-child">
                 <h3 className="el-title uk-heading-bullet uk-margin-top uk-margin-remove-bottom">{c.t("s.7.1.1.1.7.1.1.1.1.h3", "APIW 101")}</h3>        
                 <div className="el-meta uk-text-meta uk-margin-remove-top">{c.t("s.7.1.1.1.7.1.1.1.3.div", "(2-week day school format)")}</div>        

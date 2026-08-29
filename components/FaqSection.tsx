@@ -50,7 +50,7 @@ export default function FaqSection({
                     <div className="uk-panel uk-text-lead uk-margin-bottom" id={headingId}><div>
 <Heading className="elHead">{c.t(headingKey, heading)}</Heading>
 </div></div>
-<div className="uk-accordion-default uk-margin-remove-top uk-width-2xlarge uk-margin-auto" uk-accordion="collapsible: true;" id={accordionId}>
+<div className="uk-accordion-default uk-margin-remove-top uk-width-2xlarge uk-margin-auto" {...{ "uk-accordion": "collapsible: true;" }} id={accordionId}>
 {children}
 </div>
 

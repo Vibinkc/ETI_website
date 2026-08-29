@@ -11,7 +11,7 @@ export default definePage(ROUTE, (c) => (
   <>
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0 .el-title{text-transform:uppercase;}" }} />
 <div className="uk-section uk-padding-remove-vertical">
-<div className="uk-grid-margin-large uk-grid tm-grid-expand uk-grid-column-collapse uk-grid-row-large" uk-grid="">
+<div className="uk-grid-margin-large uk-grid tm-grid-expand uk-grid-column-collapse uk-grid-row-large" {...{ "uk-grid": "" }}>
 <div className="uk-grid-item-match uk-width-3-5@m">
         <div className="uk-card-primary uk-card uk-card-body uk-flex uk-flex-middle">    
                         <div className="uk-panel uk-width-1-1">            
@@ -38,7 +38,7 @@ export default definePage(ROUTE, (c) => (
 <div className="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
 <div className="uk-width-1-1">
 <div id="page#0" className="uk-margin uk-text-center">
-        <div className="uk-grid uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-flex-center uk-grid-small uk-grid-match" uk-grid="">                <div>
+        <div className="uk-grid uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-flex-center uk-grid-small uk-grid-match" {...{ "uk-grid": "" }}>                <div>
 <div className="el-item uk-panel uk-tile-muted uk-padding-small uk-margin-remove-first-child">
                 <h2 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom">{c.t("s.7.1.1.1.1.1.1.1.1.h2", "Alianza")}</h2>        
                 <div className="el-meta uk-text-meta uk-margin-top" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.7.1.1.1.1.1.1.1.3.div", "<strong>Meeting:</strong> Last Friday of the month \u00b7 4:30 PM<br><strong style=\"text-transform:uppercase;\">Union Hall </strong><br>(followed by social hour at Kilowatt Brewery @ 6:00 PM)") }} />        

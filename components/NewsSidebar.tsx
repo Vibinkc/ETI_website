@@ -44,7 +44,7 @@ export default function NewsSidebar({
   const ShareHeading = shareTag;
   return (
 <div className="js-sticky uk-width-1-4@m">
-                                <div className="uk-panel uk-position-z-index" uk-sticky="end: !.js-sticky; media: @m;">                
+                                <div className="uk-panel uk-position-z-index" {...{ "uk-sticky": "end: !.js-sticky; media: @m;" }}>                
                     <hr className="uk-margin-large-bottom uk-hidden@m" /><div className="uk-panel uk-margin-top uk-margin-medium-bottom uk-visible@m">
 <div className="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1 uk-visible@m">
 <div className="uk-grid-item-match uk-width-1-1 uk-visible@m">
@@ -56,7 +56,7 @@ export default function NewsSidebar({
         </div>    
 </div>
 </div></div><div className="uk-panel uk-margin-top">
-<div className="uk-grid-margin uk-grid tm-grid-expand" uk-grid="">
+<div className="uk-grid-margin uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>
 <div className="uk-width-2-3@s uk-width-1-1@m">
 <div className="uk-card uk-card-body uk-card-primary tm-child-list" id={latestId}>
         <div className={latestTitleClass}>{c.t(`${base}.1.3.1.1.1.1.div`, "Latest News")}</div>    

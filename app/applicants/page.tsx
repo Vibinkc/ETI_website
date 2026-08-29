@@ -21,7 +21,7 @@ export default definePage(ROUTE, (c) => (
 <div className="uk-section-default uk-section">
                                 <div className="uk-container">                
 <div className="uk-grid-margin uk-container uk-container-small">
-        <div className="uk-grid tm-grid-expand uk-grid-divider" uk-grid="">    
+        <div className="uk-grid tm-grid-expand uk-grid-divider" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <h2 className="uk-text-small uk-heading-line uk-margin-medium-bottom uk-text-center" id="page#1" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.7.1.1.1.1.1.h2", "<span>    \n        \n                    Additional Information        \n        \n        </span>") }} /><div className="uk-panel uk-margin uk-width-xlarge"><p data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.7.1.1.1.1.2.0.p", "<strong>Find out more about the programs we offer</strong>") }} />
 <p>{c.t("s.7.1.1.1.1.2.2.p", "Each offers specialized training and a structured path toward professional certification and long-term career growth.")}</p>
@@ -38,7 +38,7 @@ export default definePage(ROUTE, (c) => (
 <div className="uk-width-1-2@m">
 <h2 className="uk-text-small uk-heading-line uk-margin-medium-bottom uk-text-center" id="page#2" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.7.1.1.1.3.1.h2", "<span>    \n        \n                    Downloads        \n        \n        </span>") }} />
 <div className="uk-margin-medium-top uk-width-xlarge uk-margin-auto uk-text-center">
-        <div className="uk-flex-middle uk-grid-medium uk-child-width-auto uk-flex-center" uk-grid="">    
+        <div className="uk-flex-middle uk-grid-medium uk-child-width-auto uk-flex-center" {...{ "uk-grid": "" }}>    
                 <div className="el-item" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.7.1.1.1.3.3.1.1.div", "<a class=\"el-content uk-button uk-button-default uk-flex-inline uk-flex-center uk-flex-middle\" title=\"Tap here to download the Application Deadlines\" href=\"/images/pdf/ApplicationDeadlines.pdf\" download>\n        <span class=\"uk-margin-xsmall-right\" uk-icon=\"file-pdf\"></span>    \n        Application Deadlines    \n    \n</a>") }} />
                 <div className="el-item" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.7.1.1.1.3.3.1.3.div", "<a class=\"el-content uk-button uk-button-default uk-flex-inline uk-flex-center uk-flex-middle\" title=\"Tap here to download the Application Flow Chart\" href=\"/images/pdf/ApplicationFlowChart.pdf\" download>\n        <span class=\"uk-margin-xsmall-right\" uk-icon=\"file-pdf\"></span>    \n        Application Flow Chart    \n    \n</a>") }} />
                 <div className="el-item" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.7.1.1.1.3.3.1.5.div", "<a class=\"el-content uk-button uk-button-default uk-flex-inline uk-flex-center uk-flex-middle\" title=\"Tap here to download the Applicant Re-Interview Request Form\" href=\"/images/pdf/ApplicantReinterviewForm.pdf\" download>\n        <span class=\"uk-margin-xsmall-right\" uk-icon=\"file-pdf\"></span>    \n        Re-Interview Request Form    \n    \n</a>") }} />

@@ -50,7 +50,7 @@ export default function PageHero({
   return (
 <div className="uk-section uk-padding-remove-vertical">
 
-<div className="uk-grid-margin-large uk-grid tm-grid-expand uk-grid-column-collapse uk-grid-row-large" uk-grid="">
+<div className="uk-grid-margin-large uk-grid tm-grid-expand uk-grid-column-collapse uk-grid-row-large" {...{ "uk-grid": "" }}>
 
 <div className={`uk-grid-item-match ${leftWidth}`}>
         <div className={leftCardClass}>

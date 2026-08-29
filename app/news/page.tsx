@@ -21,10 +21,10 @@ export default definePage(ROUTE, (c) => (
 </h1>
 </div>
 </div>
-<div className="uk-grid-margin uk-grid tm-grid-expand" uk-grid="">
+<div className="uk-grid-margin uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>
 <div className="uk-width-3-4@m">
 <div className="uk-margin">
-        <div className="uk-grid uk-child-width-1-1 uk-child-width-1-2@s uk-grid-match" uk-grid="">                <div>
+        <div className="uk-grid uk-child-width-1-1 uk-child-width-1-2@s uk-grid-match" {...{ "uk-grid": "" }}>                <div>
 <div className="el-item uk-card uk-card-default uk-card-small uk-flex uk-flex-column">
                                 <div className="uk-card-media-top uk-flex-1 uk-flex uk-flex-column">
         <picture><img className="el-image uk-flex-1" loading="lazy" width="1200" height="628" src={c.m("s.5.1.3.1.1.1.1.1.1.1.0.img", "/images/news/news251120.jpg")} alt={c.a("s.5.1.3.1.1.1.1.1.1.1.0.img", "Group of VEEP graduates standing together for a photo.")} /></picture>

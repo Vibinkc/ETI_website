@@ -23,7 +23,7 @@ export default function ReadyCta({
   return (
 <div className="uk-section-primary uk-section">
 <div className="uk-grid-margin uk-container uk-container-small">
-        <div className="uk-grid tm-grid-expand" uk-grid="">    
+        <div className="uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>    
 <div className="uk-width-3-5@m">
 <h1 className="uk-text-left@m uk-text-center">
                     {c.t(`${section}.1.1.1.1.h1`, "Are you Ready?")}        

@@ -17,7 +17,7 @@ export default definePage(ROUTE, (c) => (
                     {c.t("s.4.1.1.1.1.h1", "2025 Graduation")}        
 </h1>
 <div className="uk-margin uk-text-center">
-        <div className="uk-grid uk-child-width-1-1 uk-child-width-1-3@s uk-child-width-1-4@m uk-grid-small" uk-grid="masonry: pack; parallax: 0; parallax-justify: true;" uk-lightbox="toggle: a[data-type];">                <div>
+        <div className="uk-grid uk-child-width-1-1 uk-child-width-1-3@s uk-child-width-1-4@m uk-grid-small" {...{ "uk-grid": "masonry: pack; parallax: 0; parallax-justify: true;" }} {...{ "uk-lightbox": "toggle: a[data-type];" }}>                <div>
 <div className="el-item uk-light uk-inverse-light">
         <a className="uk-flex-1 uk-transition-toggle uk-inline-clip uk-link-toggle" href="/images/galleries/Graduation-2025/250613-BC202437.jpg" data-attrs={"{\"width\":600,\"height\":400,\"srcset\":\"\\/images\\/galleries\\/Graduation-2025\\/250613-BC202437.jpg 600w\",\"sizes\":\"(min-width: 600px) 600px\"}"} data-alt="250613-BC202437" data-type="image">    
 <picture><img className="el-image uk-transition-opaque" width="600" height="400" src={c.m("s.4.1.1.1.3.1.1.1.1.1.0.img", "/images/galleries/Graduation-2025/250613-BC202437.jpg")} alt={c.a("s.4.1.1.1.3.1.1.1.1.1.0.img", "250613-BC202437")} /></picture>

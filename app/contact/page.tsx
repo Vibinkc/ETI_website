@@ -11,10 +11,10 @@ export default definePage(ROUTE, (c) => (
   <>
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "@media (max-width: 960px){#page\\#0{margin-right:30px}}#page\\#1{text-transform: uppercase; font-weight:bolder;}#page\\#2{text-transform: uppercase; font-weight:bolder;}#page\\#3{margin-top:7%;}/*#page\\#4 .uk-h5{font-size:19px;}*/" }} />
 <div className="uk-section-default uk-section uk-padding-remove-vertical">
-<div className="uk-grid tm-grid-expand uk-grid-collapse" uk-grid="">
+<div className="uk-grid tm-grid-expand uk-grid-collapse" {...{ "uk-grid": "" }}>
 <div className="uk-width-2-3@m">
 <div id="page#0" className="uk-margin" data-map-consent="preferences.openstreetmap">
-        <div className="uk-preserve-width uk-position-relative uk-position-z-index uk-dark" style={{ height: "650px" }} uk-map="">
+        <div className="uk-preserve-width uk-position-relative uk-position-z-index uk-dark" style={{ height: "650px" }} {...{ "uk-map": "" }}>
             <script type="application/json" dangerouslySetInnerHTML={{ __html: "{\"clustering\":false,\"controls\":true,\"dragging\":true,\"fit_bounds\":true,\"max_zoom\":18,\"min_zoom\":0,\"poi\":false,\"type\":\"roadmap\",\"zoom\":\"9\",\"zooming\":true,\"lazyload\":true,\"icon\":\"\\/images\\/assets\\/eti-only-logo.svg\",\"iconSize\":[60,51],\"iconAnchor\":[30,51],\"markers\":[{\"lat\":32.8237,\"lng\":-117.1211,\"title\":\"San Diego\",\"show_popup\":true},{\"lat\":32.8264391,\"lng\":-115.5762298,\"title\":\"Imperial County\"}],\"center\":{\"lat\":32.8237,\"lng\":-117.1211}}" }} />                                            <template dangerouslySetInnerHTML={{ __html: "\n                    \n<div class=\"el-item uk-text-default uk-font-default uk-text-center uk-margin-remove-first-child\">\n    \n    \n\n\n<div class=\"el-meta uk-h5 uk-margin-top uk-margin-remove-bottom\">San Diego</div>\n\n\n<div class=\"uk-margin-top\"><a href=\"https://maps.app.goo.gl/tfsSbYmWGnzQucxA7\" target=\"_blank\" class=\"el-link uk-button uk-button-danger\">Get Directions</a></div>\n</div>                " }} />
                                                             <template dangerouslySetInnerHTML={{ __html: "\n                    \n<div class=\"el-item uk-text-default uk-font-default uk-text-center uk-margin-remove-first-child\">\n    \n    \n\n\n<div class=\"el-meta uk-h5 uk-margin-top uk-margin-remove-bottom\">Imperial County</div>\n\n\n<div class=\"uk-margin-top\"><a href=\"https://maps.app.goo.gl/5HgKzLREMZdCMAm49\" target=\"_blank\" class=\"el-link uk-button uk-button-danger\">Get Directions</a></div>\n</div>                " }} />
         </div>
@@ -29,7 +29,7 @@ export default definePage(ROUTE, (c) => (
 <h2 className="uk-text-large uk-margin-xsmall-bottom uk-text-center">
                     {c.t("s.5.1.3.1.1.3.h2", "Electrical Training Institute")}        
 </h2><hr className="uk-width-large uk-margin-auto" /><div className="uk-panel uk-margin">
-<div className="uk-grid-margin uk-grid tm-grid-expand uk-grid-divider" uk-grid="">
+<div className="uk-grid-margin uk-grid tm-grid-expand uk-grid-divider" {...{ "uk-grid": "" }}>
 <div className="uk-width-1-2@s">
 <h3 className="uk-text-small uk-margin-xsmall-bottom uk-width-small@s uk-margin-auto-left uk-text-left@s uk-text-center" id="page#1">
                     {c.t("s.5.1.3.1.1.5.1.1.1.h3", "San Diego")}        
@@ -42,7 +42,7 @@ export default definePage(ROUTE, (c) => (
 </div>
 </div></div><hr className="uk-width-large uk-margin-auto" />
 <ul className="uk-list uk-margin-medium-top uk-width-medium uk-margin-auto@m uk-margin-auto">        <li className="el-item">
-    <div className="uk-child-width-expand uk-grid-column-small" uk-grid="">        <div className="uk-width-auto">
+    <div className="uk-child-width-expand uk-grid-column-small" {...{ "uk-grid": "" }}>        <div className="uk-width-auto">
 <div className="el-title uk-margin-remove uk-h5 uk-text-primary">{c.t("s.5.1.3.1.1.8.1.1.1.1.div", "Phone:")}</div>
         </div>        <div>
             <div className="el-content uk-panel uk-h5 uk-margin-remove" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.5.1.3.1.1.8.1.1.3.1.div", "<a class=\"uk-margin-remove-last-child\" href=\"tel:8585696633\">(858) 569-6633</a>") }} />
@@ -50,7 +50,7 @@ export default definePage(ROUTE, (c) => (
     </div>
 </li>
         <li className="el-item">
-    <div className="uk-child-width-expand uk-grid-column-small" uk-grid="">        <div className="uk-width-auto">
+    <div className="uk-child-width-expand uk-grid-column-small" {...{ "uk-grid": "" }}>        <div className="uk-width-auto">
 <div className="el-title uk-margin-remove uk-h5 uk-text-primary">{c.t("s.5.1.3.1.1.8.3.1.1.1.div", "E-Mail:")}</div>
         </div>        <div>
             <div className="el-content uk-panel uk-h5 uk-margin-remove"><joomla-hidden-mail className="uk-margin-remove-last-child" is-link="1" is-email="1" first="aW5mbw==" last="c2RldHQub3Jn" text="aW5mb0BzZGV0dC5vcmc=" base="">{c.t("s.5.1.3.1.1.8.3.1.3.1.0.joomla-hidden-mail", "This email address is being protected from spambots. You need JavaScript enabled to view it.")}</joomla-hidden-mail></div>
@@ -58,7 +58,7 @@ export default definePage(ROUTE, (c) => (
     </div>
 </li>
         <li className="el-item">
-    <div className="uk-child-width-expand uk-grid-column-small" uk-grid="">        <div className="uk-width-auto">
+    <div className="uk-child-width-expand uk-grid-column-small" {...{ "uk-grid": "" }}>        <div className="uk-width-auto">
 <div className="el-title uk-margin-remove uk-h5 uk-text-primary">{c.t("s.5.1.3.1.1.8.5.1.1.1.div", "Outreach:")}</div>
         </div>        <div>
             <div className="el-content uk-panel uk-h5 uk-margin-remove"><joomla-hidden-mail className="uk-margin-remove-last-child" is-link="1" is-email="1" first="b3V0cmVhY2g=" last="c2RldHQub3Jn" text="b3V0cmVhY2hAc2RldHQub3Jn" base="">{c.t("s.5.1.3.1.1.8.5.1.3.1.0.joomla-hidden-mail", "This email address is being protected from spambots. You need JavaScript enabled to view it.")}</joomla-hidden-mail></div>
@@ -66,7 +66,7 @@ export default definePage(ROUTE, (c) => (
     </div>
 </li>
         <li className="el-item">
-    <div className="uk-child-width-expand uk-grid-column-small" uk-grid="">        <div className="uk-width-auto">
+    <div className="uk-child-width-expand uk-grid-column-small" {...{ "uk-grid": "" }}>        <div className="uk-width-auto">
 <div className="el-title uk-margin-remove uk-h5 uk-text-primary">{c.t("s.5.1.3.1.1.8.7.1.1.1.div", "Social:")}</div>
         </div>        <div>
             <div className="el-content uk-panel uk-h5 uk-margin-remove" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.5.1.3.1.1.8.7.1.3.1.div", "<a href=\"https://www.facebook.com/ElectricalTrainingInstituteofSanDiegoandImperial/\" target=\"_blank\" rel=\"noopener\" title=\"Tap here to visit our Facebook page. Opens in a new browser tab.\">Facebook</a><br>\n<a href=\"https://x.com/ETI569\" target=\"_blank\" rel=\"noopener\" title=\"Tap here to visit our X page. Opens in a new browser tab.\">X</a><br>\n<a href=\"https://www.instagram.com/electrical_training_institute/\" target=\"_blank\" rel=\"noopener\" title=\"Tap here to visit our Instagram page. Opens in a new browser tab.\">Instagram</a><br>\n<a href=\"https://www.youtube.com/channel/UCNRlTsqUWirC64upO0i8slg?view_as=subscriber\" target=\"_blank\" rel=\"noopener\" title=\"Tap here to visit our YouTube page. Opens in a new browser tab.\">YouTube</a>") }} />
@@ -89,13 +89,13 @@ export default definePage(ROUTE, (c) => (
 </div>
 </div>
 <div className="uk-grid-margin uk-container uk-container-small" id="page#4">
-        <div className="uk-grid tm-grid-expand uk-grid-column-medium uk-grid-divider" uk-grid="">    
+        <div className="uk-grid tm-grid-expand uk-grid-column-medium uk-grid-divider" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@s uk-width-1-2@m">
 <h3 className="uk-heading-small uk-heading-divider uk-margin-medium-bottom">
                     {c.t("s.7.1.3.1.1.1.h3", "Training Team")}        
 </h3><div className="uk-panel uk-margin">
 <div className="uk-grid-margin uk-container">
-        <div className="uk-grid tm-grid-expand" uk-grid="">    
+        <div className="uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <div className="uk-h5 uk-margin-xsmall-bottom">
                     {c.t("s.7.1.3.1.1.2.1.1.1.1.div", "Kevin Johnson")}        
@@ -107,7 +107,7 @@ export default definePage(ROUTE, (c) => (
         </div>    
 </div></div><hr /><div className="uk-panel uk-margin">
 <div className="uk-grid-margin uk-container">
-        <div className="uk-grid tm-grid-expand" uk-grid="">    
+        <div className="uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <div className="uk-h5 uk-margin-xsmall-bottom">
                     {c.t("s.7.1.3.1.1.4.1.1.1.1.div", "James Stark")}        
@@ -119,7 +119,7 @@ export default definePage(ROUTE, (c) => (
         </div>    
 </div></div><hr /><div className="uk-panel uk-margin">
 <div className="uk-grid-margin uk-container">
-        <div className="uk-grid tm-grid-expand" uk-grid="">    
+        <div className="uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <div className="uk-h5 uk-margin-xsmall-bottom">
                     {c.t("s.7.1.3.1.1.6.1.1.1.1.div", "John Campbell")}        
@@ -131,7 +131,7 @@ export default definePage(ROUTE, (c) => (
         </div>    
 </div></div><hr /><div className="uk-panel uk-margin">
 <div className="uk-grid-margin uk-container">
-        <div className="uk-grid tm-grid-expand" uk-grid="">    
+        <div className="uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <div className="uk-h5 uk-margin-xsmall-bottom">
                     {c.t("s.7.1.3.1.1.8.1.1.1.1.div", "Marcus McGhee")}        
@@ -143,7 +143,7 @@ export default definePage(ROUTE, (c) => (
         </div>    
 </div></div><hr /><div className="uk-panel uk-margin">
 <div className="uk-grid-margin uk-container">
-        <div className="uk-grid tm-grid-expand" uk-grid="">    
+        <div className="uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <div className="uk-h5 uk-margin-xsmall-bottom">
                     {c.t("s.7.1.3.1.1.10.1.1.1.1.div", "Ken Collier")}        
@@ -155,7 +155,7 @@ export default definePage(ROUTE, (c) => (
         </div>    
 </div></div><hr /><div className="uk-panel uk-margin">
 <div className="uk-grid-margin uk-container">
-        <div className="uk-grid tm-grid-expand" uk-grid="">    
+        <div className="uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <div className="uk-h5 uk-margin-xsmall-bottom">
                     {c.t("s.7.1.3.1.1.12.1.1.1.1.div", "Garett Camp")}        
@@ -167,7 +167,7 @@ export default definePage(ROUTE, (c) => (
         </div>    
 </div></div><hr /><div className="uk-panel uk-margin">
 <div className="uk-grid-margin uk-container">
-        <div className="uk-grid tm-grid-expand" uk-grid="">    
+        <div className="uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <div className="uk-h5 uk-margin-xsmall-bottom">
                     {c.t("s.7.1.3.1.1.14.1.1.1.1.div", "Jose Durazo")}        
@@ -179,7 +179,7 @@ export default definePage(ROUTE, (c) => (
         </div>    
 </div></div><hr /><div className="uk-panel uk-margin">
 <div className="uk-grid-margin uk-container">
-        <div className="uk-grid tm-grid-expand" uk-grid="">    
+        <div className="uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <div className="uk-h5 uk-margin-xsmall-bottom">
                     {c.t("s.7.1.3.1.1.16.1.1.1.1.div", "Josh Walters")}        
@@ -191,7 +191,7 @@ export default definePage(ROUTE, (c) => (
         </div>    
 </div></div><hr /><div className="uk-panel uk-margin">
 <div className="uk-grid-margin uk-container">
-        <div className="uk-grid tm-grid-expand" uk-grid="">    
+        <div className="uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <div className="uk-h5 uk-margin-xsmall-bottom">
                     {c.t("s.7.1.3.1.1.18.1.1.1.1.div", "Richard Gonzales")}        
@@ -208,7 +208,7 @@ export default definePage(ROUTE, (c) => (
                     {c.t("s.7.1.3.1.3.1.h3", "Operations Team")}        
 </h3><div className="uk-panel uk-margin">
 <div className="uk-grid-margin-small uk-container">
-        <div className="uk-grid tm-grid-expand uk-grid-row-small" uk-grid="">    
+        <div className="uk-grid tm-grid-expand uk-grid-row-small" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <div className="uk-h5 uk-margin-xsmall-bottom">
                     {c.t("s.7.1.3.1.3.2.1.1.1.1.div", "Joyce Poblete")}        
@@ -220,7 +220,7 @@ export default definePage(ROUTE, (c) => (
         </div>    
 </div></div><hr /><div className="uk-panel uk-margin-top uk-margin-remove-bottom">
 <div className="uk-grid-margin-small uk-container">
-        <div className="uk-grid tm-grid-expand uk-grid-row-small" uk-grid="">    
+        <div className="uk-grid tm-grid-expand uk-grid-row-small" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <div className="uk-h5 uk-margin-xsmall-bottom">
                     {c.t("s.7.1.3.1.3.4.1.1.1.1.div", "Alejandra Velasquez")}        
@@ -232,7 +232,7 @@ export default definePage(ROUTE, (c) => (
         </div>    
 </div></div><div className="uk-panel uk-text-small uk-margin-small-top uk-margin-bottom"><p>{c.t("s.7.1.3.1.3.5.0.p", "Front desk operations, Electrician Trainee classes, Work hours reports, Class reminders, CET Courses, JW State Renewals, Bookstore")}</p></div><hr id="gail" /><div className="uk-panel uk-margin-top uk-margin-remove-bottom">
 <div className="uk-grid-margin-small uk-container">
-        <div className="uk-grid tm-grid-expand uk-grid-row-small" uk-grid="">    
+        <div className="uk-grid tm-grid-expand uk-grid-row-small" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <div className="uk-h5 uk-margin-xsmall-bottom">
                     {c.t("s.7.1.3.1.3.7.1.1.1.1.div", "Gail Broughman")}        
@@ -244,7 +244,7 @@ export default definePage(ROUTE, (c) => (
         </div>    
 </div></div><div className="uk-panel uk-text-small uk-margin-small-top uk-margin-bottom">{c.t("s.7.1.3.1.3.8.div", "Coordinate and dispatch apprentice manpower, Process and Indenture new Apprentices")}</div><hr /><div className="uk-panel uk-margin-top uk-margin-remove-bottom">
 <div className="uk-grid-margin-small uk-container">
-        <div className="uk-grid tm-grid-expand uk-grid-row-small" uk-grid="">    
+        <div className="uk-grid tm-grid-expand uk-grid-row-small" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <div className="uk-h5 uk-margin-xsmall-bottom">
                     {c.t("s.7.1.3.1.3.10.1.1.1.1.div", "Judy Milligan")}        
@@ -256,7 +256,7 @@ export default definePage(ROUTE, (c) => (
         </div>    
 </div></div><div className="uk-panel uk-text-small uk-margin-small-top uk-margin-bottom">{c.t("s.7.1.3.1.3.11.div", "Front desk operations, Applications, Coordinate aptitude testing")}</div><hr /><div className="uk-panel uk-margin-top uk-margin-remove-bottom">
 <div className="uk-grid-margin-small uk-container">
-        <div className="uk-grid tm-grid-expand uk-grid-row-small" uk-grid="">    
+        <div className="uk-grid tm-grid-expand uk-grid-row-small" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <div className="uk-h5 uk-margin-xsmall-bottom">
                     {c.t("s.7.1.3.1.3.13.1.1.1.1.div", "Irene Castro")}        
@@ -268,7 +268,7 @@ export default definePage(ROUTE, (c) => (
         </div>    
 </div></div><div className="uk-panel uk-text-small uk-margin-small-top uk-margin-bottom">{c.t("s.7.1.3.1.3.14.div", "Apprentice re-rates, Apprentice Make-ups")}</div><hr /><div className="uk-panel uk-margin-top uk-margin-remove-bottom">
 <div className="uk-grid-margin-small uk-container">
-        <div className="uk-grid tm-grid-expand uk-grid-row-small" uk-grid="">    
+        <div className="uk-grid tm-grid-expand uk-grid-row-small" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <div className="uk-h5 uk-margin-xsmall-bottom">
                     {c.t("s.7.1.3.1.3.16.1.1.1.1.div", "Jenny Marin")}        
@@ -280,7 +280,7 @@ export default definePage(ROUTE, (c) => (
         </div>    
 </div></div><div className="uk-panel uk-text-small uk-margin-small-top uk-margin-bottom">{c.t("s.7.1.3.1.3.17.div", "Front desk operations, Applications, Apprentice intake, Class reminders, Evaluations, Bookstore, Notary services")}</div><hr /><div className="uk-panel uk-margin-top uk-margin-remove-bottom">
 <div className="uk-grid-margin-small uk-container">
-        <div className="uk-grid tm-grid-expand uk-grid-row-small" uk-grid="">    
+        <div className="uk-grid tm-grid-expand uk-grid-row-small" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <div className="uk-h5 uk-margin-xsmall-bottom">
                     {c.t("s.7.1.3.1.3.19.1.1.1.1.div", "Jocelyn Zepeda")}        
@@ -292,7 +292,7 @@ export default definePage(ROUTE, (c) => (
         </div>    
 </div></div><div className="uk-panel uk-text-small uk-margin-small-top uk-margin-bottom">{c.t("s.7.1.3.1.3.20.div", "Applications, Coordinate aptitude testing, Veteran's Benefits")}</div><hr /><div className="uk-panel uk-margin-top">
 <div className="uk-grid-margin-small uk-container">
-        <div className="uk-grid tm-grid-expand uk-grid-row-small" uk-grid="">    
+        <div className="uk-grid tm-grid-expand uk-grid-row-small" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-2@m">
 <div className="uk-h5 uk-margin-xsmall-bottom">
                     {c.t("s.7.1.3.1.3.22.1.1.1.1.div", "Sin Khounborin")}        

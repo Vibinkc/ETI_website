@@ -32,7 +32,7 @@ export default definePage(ROUTE, (c) => (
         </div>    
 </div>
 <div className="uk-grid-margin uk-container uk-container-small">
-        <div className="uk-grid tm-grid-expand" uk-grid="">    
+        <div className="uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>    
 <div className="uk-width-3-4@s uk-width-3-4@m">
                     <div className="uk-panel uk-text-meta uk-margin" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.5.1.1.1.4.3.1.1.1.div", "<time datetime=\"2025-11-20T11:49:52-08:00\">November 20, 2025</time> | <a href=\"/news\">News</a>") }} /><div className="uk-panel uk-margin">{c.t("s.5.1.1.1.4.3.1.1.2.div", "11 Graduates from the Veteran's Electrical Entry Program (VEEP) will begin their careers as Inside Wireman Apprentices at JATC's around the United States! A couple chose to stay here in San Diego to finish their apprenticeship\u2026")}</div>
 </div>
@@ -49,14 +49,14 @@ export default definePage(ROUTE, (c) => (
 </div>
 <div className="uk-section-default uk-section">
                                 <div className="uk-container">                
-<div className="uk-grid-margin uk-grid tm-grid-expand" uk-grid="">
+<div className="uk-grid-margin uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>
 <div className="uk-width-3-4@m">
 <div className="uk-margin">
-        <div className="uk-grid uk-child-width-1-1 uk-grid-match" uk-grid="">                <div>
+        <div className="uk-grid uk-child-width-1-1 uk-grid-match" {...{ "uk-grid": "" }}>                <div>
 <div className="el-item uk-card uk-card-default uk-card-small uk-flex uk-flex-column">
-                <div className="uk-grid-collapse uk-flex-1 uk-flex-column  uk-flex-row@m" uk-grid="">        
+                <div className="uk-grid-collapse uk-flex-1 uk-flex-column  uk-flex-row@m" {...{ "uk-grid": "" }}>        
                         <div className="uk-width-1-2@m uk-flex uk-flex-column  uk-flex-1 uk-flex-initial@m">            
-                                <div className="uk-card-media-left uk-flex-1 uk-flex uk-flex-column" uk-toggle="cls: uk-card-media-left uk-card-media-top; mode: media; media: @m">
+                                <div className="uk-card-media-left uk-flex-1 uk-flex uk-flex-column" {...{ "uk-toggle": "cls: uk-card-media-left uk-card-media-top; mode: media; media: @m" }}>
         <picture><img className="el-image uk-flex-1" loading="lazy" width="1200" height="628" src={c.m("s.7.1.1.1.1.1.1.1.1.1.1.1.0.img", "/images/news/news250625.jpg")} alt={c.a("s.7.1.1.1.1.1.1.1.1.1.1.1.0.img", "Group of high school girls at Boot Camp posing for photo")} /></picture>
 </div>                
                         </div>            
@@ -72,9 +72,9 @@ export default definePage(ROUTE, (c) => (
 </div></div>
                 <div>
 <div className="el-item uk-card uk-card-default uk-card-small uk-flex uk-flex-column">
-                <div className="uk-grid-collapse uk-flex-1 uk-flex-column  uk-flex-row@m" uk-grid="">        
+                <div className="uk-grid-collapse uk-flex-1 uk-flex-column  uk-flex-row@m" {...{ "uk-grid": "" }}>        
                         <div className="uk-width-1-2@m uk-flex uk-flex-column  uk-flex-1 uk-flex-initial@m">            
-                                <div className="uk-card-media-left uk-flex-1 uk-flex uk-flex-column" uk-toggle="cls: uk-card-media-left uk-card-media-top; mode: media; media: @m">
+                                <div className="uk-card-media-left uk-flex-1 uk-flex uk-flex-column" {...{ "uk-toggle": "cls: uk-card-media-left uk-card-media-top; mode: media; media: @m" }}>
         <picture><img className="el-image uk-flex-1" loading="lazy" width="1200" height="628" src={c.m("s.7.1.1.1.1.1.3.1.1.1.1.1.0.img", "/images/news/news250312.jpg")} alt={c.a("s.7.1.1.1.1.1.3.1.1.1.1.1.0.img", "High school girl gives the thumb's up at ETI")} /></picture>
 </div>                
                         </div>            

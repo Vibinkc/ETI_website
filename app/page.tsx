@@ -20,8 +20,8 @@ export default async function Page() {
 <main id="tm-main">
                 <div id="system-message-container" aria-live="polite"></div>
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0{color:#fff;}#page\\#1{color:#fff;}#page\\#2{color:#fff;}@media (min-width: 960px){#page\\#3{margin-top: -92px !important;}}#page\\#4 .el-link{display:none;}#page\\#4 .el-title{text-transform:uppercase;}#page\\#5{background-color:#3350A0; padding:20px 0;}#page\\#6 .el-link{display:none;}#page\\#6 .el-title{text-transform:uppercase;}#page\\#7{background-color:#14448e; padding:20px 0;}#page\\#8 .el-link{display:none;}#page\\#8 .el-title{text-transform:uppercase;}#page\\#9{background-color:#0f3878; padding:20px 0;}#page\\#10 .el-link{display:none;}#page\\#10 .el-title{text-transform:uppercase;}#page\\#11{background-color:#08295b; padding:20px 0;}#page\\#12 .el-link{display:none;}#page\\#12 .el-title{text-transform:uppercase;}#page\\#12 svg{width: 80px; height: auto;}#page\\#13{background-color:#031f4a; padding:20px 0;}#page\\#14{margin-top:7%;}#page\\#15{margin-top:7%;}#page\\#16 .el-image{border-radius: 50%; box-shadow: 0 0 0 0 #c42650; transform: scale(1); animation: pulse 2s infinite; margin-top: -42px;}@keyframes pulse{0%{transform: scale(0.95); box-shadow: 0 0 0 0 rgba(196,38,80, 0.8);}70%{transform: scale(1); box-shadow: 0 0 0 10px rgba(196,38,80, 0);}100%{transform: scale(0.95); box-shadow: 0 0 0 0 rgba(196,38,80, 0);}}#page\\#17{margin-top:7%;}#page\\#18{margin-top:7%;}#page\\#19 .el-item{display: flex; flex-direction: column;}#page\\#19 .el-title{order: 2;}#page\\#19 .el-content{order: 1; margin-bottom:10px;}#page\\#19 .el-meta{order: 3;}#page\\#20{margin-top:7%;}#page\\#21 .el-item{border-bottom: 1.5px dotted #7b7a7a; padding-bottom: 7px}#page\\#21 .el-content{margin-bottom:20px;}#page\\#21 .el-content ul{list-style-type: none;padding-left: 10px;}#page\\#22 .el-content{font-weight:bold;font-size:105%;}" }} />
-<div id="page#3" className="uk-section-default uk-position-relative uk-section uk-flex uk-flex-middle" style={{ backgroundColor: "rgba(3, 31, 74, 0.6)" }} uk-height-viewport="offset-top: true;">
-                <video playsInline={true} loop={true} muted={true} className="uk-blend-multiply" uk-cover="" src={c.m("s.5.1.video", "/images/assets/eti-home.mp4")} />        
+<div id="page#3" className="uk-section-default uk-position-relative uk-section uk-flex uk-flex-middle" style={{ backgroundColor: "rgba(3, 31, 74, 0.6)" }} {...{ "uk-height-viewport": "offset-top: true;" }}>
+                <video playsInline={true} loop={true} muted={true} className="uk-blend-multiply" {...{ "uk-cover": "" }} src={c.m("s.5.1.video", "/images/assets/eti-home.mp4")} />        
                         <div className="uk-width-1-1">
                                 <div className="uk-container uk-position-relative">                
 <div className="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
@@ -41,13 +41,13 @@ export default async function Page() {
                                 </div>                
                         </div>
 </div>
-<div className="uk-section-default uk-section uk-padding-remove-vertical" uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-slide-bottom-medium; delay: 100;">
+<div className="uk-section-default uk-section uk-padding-remove-vertical" {...{ "uk-scrollspy": "target: [uk-scrollspy-class]; cls: uk-animation-slide-bottom-medium; delay: 100;" }}>
                                 <div className="uk-container uk-container-xlarge uk-padding-remove-horizontal">                
-<div className="uk-grid tm-grid-expand uk-grid-collapse" uk-grid="">
+<div className="uk-grid tm-grid-expand uk-grid-collapse" {...{ "uk-grid": "" }}>
 <div className="uk-light uk-width-1-2@s uk-width-1-5@m" id="page#5">
 <div className="uk-margin uk-text-center" id="page#4">
         <Link className="uk-display-block uk-panel uk-margin-remove-first-child uk-link-toggle" href="/applicants">    
-        <img className="uk-text-emphasis el-image" width="60" height="80" uk-svg="" src={c.m("s.7.1.1.1.1.1.1.img", "/images/assets/file-alt-solid.svg")} alt={c.a("s.7.1.1.1.1.1.1.img", "")} />
+        <img className="uk-text-emphasis el-image" width="60" height="80" {...{ "uk-svg": "" }} src={c.m("s.7.1.1.1.1.1.1.img", "/images/assets/file-alt-solid.svg")} alt={c.a("s.7.1.1.1.1.1.1.img", "")} />
                 <h4 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom">{c.t("s.7.1.1.1.1.1.3.h4", "Applicants")}</h4>        
                 <div className="el-content uk-panel uk-margin-top" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.7.1.1.1.1.1.5.div", "Start a rewarding career <br>in electrical construction") }} />        
         </Link>    
@@ -56,7 +56,7 @@ export default async function Page() {
 <div className="uk-light uk-width-1-2@s uk-width-1-5@m" id="page#7">
 <div className="uk-margin uk-text-center" id="page#6">
         <Link className="uk-display-block uk-panel uk-margin-remove-first-child uk-link-toggle" href="/apprentices">    
-        <img className="uk-text-emphasis el-image" width="100" height="80" uk-svg="" src={c.m("s.7.1.1.3.1.1.1.img", "/images/assets/graduation-cap-solid.svg")} alt={c.a("s.7.1.1.3.1.1.1.img", "")} />
+        <img className="uk-text-emphasis el-image" width="100" height="80" {...{ "uk-svg": "" }} src={c.m("s.7.1.1.3.1.1.1.img", "/images/assets/graduation-cap-solid.svg")} alt={c.a("s.7.1.1.3.1.1.1.img", "")} />
                 <h4 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom">{c.t("s.7.1.1.3.1.1.3.h4", "Apprentices")}</h4>        
                 <div className="el-content uk-panel uk-margin-top" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.7.1.1.3.1.1.5.div", "Continue to train, earn, <br>and build your future") }} />        
         </Link>    
@@ -65,7 +65,7 @@ export default async function Page() {
 <div className="uk-light uk-width-1-3@s uk-width-1-5@m" id="page#9">
 <div className="uk-margin uk-text-center" id="page#8">
         <Link className="uk-display-block uk-panel uk-margin-remove-first-child uk-link-toggle" href="/electrician-trainees">    
-        <img className="uk-text-emphasis el-image" width="80" height="80" uk-svg="" src={c.m("s.7.1.1.5.1.1.1.img", "/images/assets/wire.svg")} alt={c.a("s.7.1.1.5.1.1.1.img", "")} />
+        <img className="uk-text-emphasis el-image" width="80" height="80" {...{ "uk-svg": "" }} src={c.m("s.7.1.1.5.1.1.1.img", "/images/assets/wire.svg")} alt={c.a("s.7.1.1.5.1.1.1.img", "")} />
                 <h4 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom">{c.t("s.7.1.1.5.1.1.3.h4", "Electrician Trainees")}</h4>        
                 <div className="el-content uk-panel uk-margin-top" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.7.1.1.5.1.1.5.div", "Grow your career in <br>electrical construction") }} />        
         </Link>    
@@ -74,7 +74,7 @@ export default async function Page() {
 <div className="uk-light uk-width-1-3@s uk-width-1-5@m" id="page#11">
 <div className="uk-margin uk-text-center" id="page#10">
         <Link className="uk-display-block uk-panel uk-margin-remove-first-child uk-link-toggle" href="/continuing-education">    
-        <img className="uk-text-emphasis el-image" width="80" height="80" uk-svg="" src={c.m("s.7.1.1.7.1.1.1.img", "/images/assets/hard-hat-solid.svg")} alt={c.a("s.7.1.1.7.1.1.1.img", "")} />
+        <img className="uk-text-emphasis el-image" width="80" height="80" {...{ "uk-svg": "" }} src={c.m("s.7.1.1.7.1.1.1.img", "/images/assets/hard-hat-solid.svg")} alt={c.a("s.7.1.1.7.1.1.1.img", "")} />
                 <h4 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom">{c.t("s.7.1.1.7.1.1.3.h4", "Continuing Education")}</h4>        
                 <div className="el-content uk-panel uk-margin-top"><p>{c.t("s.7.1.1.7.1.1.5.0.p", "Expand your skills, stay up to date & maintain certifications")}</p></div>        
         </Link>    
@@ -83,7 +83,7 @@ export default async function Page() {
 <div className="uk-light uk-width-1-3@s uk-width-1-5@m" id="page#13">
 <div className="uk-margin uk-text-center" id="page#12">
         <a className="uk-display-block uk-panel uk-margin-remove-first-child uk-link-toggle" href="https://secure2.tradeschoolinc.com/v5/sdett-org/login/index.php" target="_blank">    
-        <span className="uk-text-emphasis el-image" uk-icon="icon: fa6-solid--user-gear;"></span>
+        <span className="uk-text-emphasis el-image" {...{ "uk-icon": "icon: fa6-solid--user-gear;" }}></span>
                 <h4 className="el-title uk-h3 uk-margin-top uk-margin-remove-bottom">{c.t("s.7.1.1.9.1.1.3.h4", "Contractors")}</h4>        
                 <div className="el-content uk-panel uk-margin-top" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.7.1.1.9.1.1.5.div", "Request or verify skilled <br>apprentices for your jobsite") }} />        
                 <div className="uk-margin-top"><div className="el-link uk-button uk-button-default">{c.t("s.7.1.1.9.1.1.7.0.div", "Tap here to visit the Contractors' page. Opens in a new browser tab.")}</div></div>        
@@ -104,7 +104,7 @@ export default async function Page() {
 <div className="hd-timeline-container hd-timeline-align-right hd-timeline-align-right-alternate@m">
     <div className="hd-timeline-line" style={{ backgroundColor: "#70BB32" }}></div>
         <div>
-<span className="el-timeline-icon" uk-icon="icon: eti-logo; width: 40; height: 40;" style={{ backgroundColor: "rgba(255, 255, 255, 1)", borderColor: "#70BB32" }}></span>
+<span className="el-timeline-icon" {...{ "uk-icon": "icon: eti-logo; width: 40; height: 40;" }} style={{ backgroundColor: "rgba(255, 255, 255, 1)", borderColor: "#70BB32" }}></span>
 <div className="hd-timeline-item-container">
 <div className="el-item uk-margin-top uk-panel uk-tile-muted uk-padding uk-margin-remove-first-child">
                 <h3 className="el-title uk-card-title uk-text-primary uk-margin-top uk-margin-remove-bottom">                        {c.t("s.9.1.1.1.4.3.3.1.1.h3", "Apply to the Electrical Training Institute Apprenticeship Program")}                    </h3>        
@@ -113,7 +113,7 @@ export default async function Page() {
 </div>
 </div>
         <div>
-<span className="el-timeline-icon" uk-icon="icon: eti-logo; width: 40; height: 40;" style={{ backgroundColor: "rgba(255, 255, 255, 1)", borderColor: "#70BB32" }}></span>
+<span className="el-timeline-icon" {...{ "uk-icon": "icon: eti-logo; width: 40; height: 40;" }} style={{ backgroundColor: "rgba(255, 255, 255, 1)", borderColor: "#70BB32" }}></span>
 <div className="hd-timeline-item-container">
 <div className="el-item uk-margin-top uk-panel uk-tile-muted uk-padding uk-margin-remove-first-child">
                 <h3 className="el-title uk-card-title uk-text-primary uk-margin-top uk-margin-remove-bottom">                        {c.t("s.9.1.1.1.4.5.3.1.1.h3", "Earn While You Learn")}                    </h3>        
@@ -122,7 +122,7 @@ export default async function Page() {
 </div>
 </div>
         <div>
-<span className="el-timeline-icon" uk-icon="icon: eti-logo; width: 40; height: 40;" style={{ backgroundColor: "rgba(255, 255, 255, 1)", borderColor: "#70BB32" }}></span>
+<span className="el-timeline-icon" {...{ "uk-icon": "icon: eti-logo; width: 40; height: 40;" }} style={{ backgroundColor: "rgba(255, 255, 255, 1)", borderColor: "#70BB32" }}></span>
 <div className="hd-timeline-item-container">
 <div className="el-item uk-margin-top uk-panel uk-tile-muted uk-padding uk-margin-remove-first-child">
                 <h3 className="el-title uk-card-title uk-text-primary uk-margin-top uk-margin-remove-bottom">                        {c.t("s.9.1.1.1.4.7.3.1.1.h3", "Learn From the Best")}                    </h3>        
@@ -131,7 +131,7 @@ export default async function Page() {
 </div>
 </div>
         <div>
-<span className="el-timeline-icon" uk-icon="icon: eti-logo; width: 40; height: 40;" style={{ backgroundColor: "rgba(255, 255, 255, 1)", borderColor: "#70BB32" }}></span>
+<span className="el-timeline-icon" {...{ "uk-icon": "icon: eti-logo; width: 40; height: 40;" }} style={{ backgroundColor: "rgba(255, 255, 255, 1)", borderColor: "#70BB32" }}></span>
 <div className="hd-timeline-item-container">
 <div className="el-item uk-margin-top uk-panel uk-tile-muted uk-padding uk-margin-remove-first-child">
                 <h3 className="el-title uk-card-title uk-text-primary uk-margin-top uk-margin-remove-bottom">                        {c.t("s.9.1.1.1.4.9.3.1.1.h3", "Experience Strength Through Solidarity")}                    </h3>        
@@ -140,7 +140,7 @@ export default async function Page() {
 </div>
 </div>
         <div>
-<span className="el-timeline-icon" uk-icon="icon: eti-logo; width: 40; height: 40;" style={{ backgroundColor: "rgba(255, 255, 255, 1)", borderColor: "#70BB32" }}></span>
+<span className="el-timeline-icon" {...{ "uk-icon": "icon: eti-logo; width: 40; height: 40;" }} style={{ backgroundColor: "rgba(255, 255, 255, 1)", borderColor: "#70BB32" }}></span>
 <div className="hd-timeline-item-container">
 <div className="el-item uk-margin-top uk-panel uk-tile-muted uk-padding uk-margin-remove-first-child">
                 <h3 className="el-title uk-card-title uk-text-primary uk-margin-top uk-margin-remove-bottom">                        {c.t("s.9.1.1.1.4.11.3.1.1.h3", "Become a Journeyman Electrician")}                    </h3>        
@@ -149,7 +149,7 @@ export default async function Page() {
 </div>
 </div>
         <div>
-<span className="el-timeline-icon" uk-icon="icon: eti-logo; width: 40; height: 40;" style={{ backgroundColor: "rgba(255, 255, 255, 1)", borderColor: "#70BB32" }}></span>
+<span className="el-timeline-icon" {...{ "uk-icon": "icon: eti-logo; width: 40; height: 40;" }} style={{ backgroundColor: "rgba(255, 255, 255, 1)", borderColor: "#70BB32" }}></span>
 <div className="hd-timeline-item-container">
 <div className="el-item uk-margin-top uk-panel uk-tile-muted uk-padding uk-margin-remove-first-child">
                 <h3 className="el-title uk-card-title uk-text-primary uk-margin-top uk-margin-remove-bottom">                        {c.t("s.9.1.1.1.4.13.3.1.1.h3", "Work Hard. Live Well.")}                    </h3>        
@@ -173,7 +173,7 @@ export default async function Page() {
 <h2 className="elHeadLt" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.11.1.1.1.1.0.1.h2", "Opportunities<br class=\"uk-hidden@s\"> for Veterans") }} />
 </div></div><div className="uk-panel uk-margin">
 <div className="uk-grid-margin uk-container uk-container-xsmall">
-        <div className="uk-grid tm-grid-expand" uk-grid="">    
+        <div className="uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>    
 <div className="uk-width-1-4@m">
 <div className="uk-margin uk-text-center">
         <picture><img className="el-image" loading="lazy" width="175" height="149" src={c.m("s.11.1.1.1.2.1.1.1.1.1.0.img", "/media/yootheme/cache/74/VEEP_Logo-7455a20e.png")} alt={c.a("s.11.1.1.1.2.1.1.1.1.1.0.img", "Offical VEEP logo")} /></picture>    
@@ -202,11 +202,11 @@ export default async function Page() {
 <div className="uk-grid-item-match uk-width-1-1">
                         <div className="uk-panel uk-width-1-1">            
 <div className="uk-position-relative uk-margin uk-text-center" style={{ zIndex: "1" }}>
-        <a className="el-link uk-box-shadow-bottom" href="#js-3" uk-toggle=""><picture><img className="el-image" width="750" height="393" src={c.m("s.13.1.3.1.1.1.1.0.0.img", "/media/yootheme/cache/0a/home-video-0a5ba3bd.jpg")} alt={c.a("s.13.1.3.1.1.1.1.0.0.img", "Watch the video about San Diego Electrical Training Institute ")} /></picture></a>    
-            <div id="js-3" className="uk-flex-top uk-modal" uk-modal="">
+        <a className="el-link uk-box-shadow-bottom" href="#js-3" {...{ "uk-toggle": "" }}><picture><img className="el-image" width="750" height="393" src={c.m("s.13.1.3.1.1.1.1.0.0.img", "/media/yootheme/cache/0a/home-video-0a5ba3bd.jpg")} alt={c.a("s.13.1.3.1.1.1.1.0.0.img", "Watch the video about San Diego Electrical Training Institute ")} /></picture></a>    
+            <div id="js-3" className="uk-flex-top uk-modal" {...{ "uk-modal": "" }}>
         <div className="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
-            <button className="uk-modal-close-outside" type="button" uk-close=""></button>
-            <iframe src="https://www.youtube.com/embed/iZDcXoZ-9V0?si=HBf9I2X_EcCIDgg9&disablekb=1" width="950" height="534" allowFullScreen={true} loading="lazy" uk-video="" uk-responsive="" referrerPolicy="strict-origin-when-cross-origin" title="Video"></iframe>        </div>
+            <button className="uk-modal-close-outside" type="button" {...{ "uk-close": "" }}></button>
+            <iframe src="https://www.youtube.com/embed/iZDcXoZ-9V0?si=HBf9I2X_EcCIDgg9&disablekb=1" width="950" height="534" allowFullScreen={true} loading="lazy" {...{ "uk-video": "" }} {...{ "uk-responsive": "" }} referrerPolicy="strict-origin-when-cross-origin" title="Video"></iframe>        </div>
     </div>
 </div>
 <div className="uk-disabled uk-position-absolute uk-width-1-1 uk-text-center" id="page#16" style={{ top: "45%", zIndex: "2" }}>
@@ -224,7 +224,7 @@ export default async function Page() {
                     <div className="uk-panel uk-margin-large-bottom" id="page#17"><div>
 <h2 className="elHeadLt">{c.t("s.15.1.1.1.1.0.1.h2", "Latest News")}</h2>
 </div></div>
-<div className="uk-slider-container uk-margin uk-text-center" uk-slider="autoplay: 1;">
+<div className="uk-slider-container uk-margin uk-text-center" {...{ "uk-slider": "autoplay: 1;" }}>
     <div className="uk-position-relative">
             <div className="uk-slider-items uk-grid">                                <div className="uk-width-1-1 uk-width-1-2@s uk-width-1-3@m uk-flex">
 <div className="el-item uk-width-1-1 uk-flex uk-flex-column">
@@ -258,8 +258,8 @@ export default async function Page() {
         </Link>    
 </div></div>                            </div>
     </div>
-<div className="uk-margin-top" uk-inverse="">
-    <ul className="el-nav uk-slider-nav uk-dotnav uk-flex-center" uk-margin=""></ul>
+<div className="uk-margin-top" {...{ "uk-inverse": "" }}>
+    <ul className="el-nav uk-slider-nav uk-dotnav uk-flex-center" {...{ "uk-margin": "" }}></ul>
 </div>    
 </div><div className="uk-panel uk-margin-medium-top uk-text-center"><p data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.15.1.1.1.4.0.p", "<a class=\"el-link uk-button uk-button-text\" style=\"color: #fff;\" href=\"/all-news\" title=\"Tap of click here to read more news\">Read more news</a>") }} /></div>
 </div>
@@ -277,7 +277,7 @@ export default async function Page() {
 </div>
 <div className="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
 <div className="uk-width-1-1">
-<div className="uk-slider-container video-slider uk-margin-bottom uk-text-center" uk-slider="center: 1; velocity: 0.15; autoplay: 1;  autoplayInterval: 5000;" id="page#19">
+<div className="uk-slider-container video-slider uk-margin-bottom uk-text-center" {...{ "uk-slider": "center: 1; velocity: 0.15; autoplay: 1;  autoplayInterval: 5000;" }} id="page#19">
     <div className="uk-position-relative">
             <div className="uk-slider-items uk-grid uk-grid-large uk-flex-middle">                                <div className="uk-width-1-1 uk-width-4-5@s uk-width-3-5@m">
 <div className="el-item uk-panel uk-tile-muted uk-padding-small uk-margin-remove-first-child">
@@ -337,8 +337,8 @@ export default async function Page() {
 </div></div>        
 </div></div>                            </div>
     </div>
-<div className="uk-margin-top" uk-inverse="">
-    <ul className="el-nav uk-slider-nav uk-dotnav uk-flex-center" uk-margin=""></ul>
+<div className="uk-margin-top" {...{ "uk-inverse": "" }}>
+    <ul className="el-nav uk-slider-nav uk-dotnav uk-flex-center" {...{ "uk-margin": "" }}></ul>
 </div>    
 </div>
 </div>
@@ -352,7 +352,7 @@ export default async function Page() {
                     <div className="uk-panel uk-margin-medium-bottom" id="page#20"><div>
 <h2 className="elHead" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.19.1.1.1.1.0.1.h2", "Frequently<br class=\"uk-hidden@s\"> Asked Questions") }} />
 </div></div>
-<div className="uk-accordion-default uk-margin-remove-top uk-width-xlarge uk-margin-auto" uk-accordion="collapsible: true;" id="page#21">
+<div className="uk-accordion-default uk-margin-remove-top uk-width-xlarge uk-margin-auto" {...{ "uk-accordion": "collapsible: true;" }} id="page#21">
 <div className="el-item">
     <a className="el-title uk-accordion-title" href="" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.19.1.1.1.3.1.1.a", "Who can apply to the program? <span uk-accordion-icon></span>") }} />
     <div className="uk-accordion-content">
@@ -395,7 +395,7 @@ export default async function Page() {
 </div>
 <div className="uk-section-primary uk-section">
 <div className="uk-grid-margin uk-container uk-container-small">
-        <div className="uk-grid tm-grid-expand" uk-grid="">    
+        <div className="uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>    
 <div className="uk-width-3-5@m">
 <h1 className="uk-text-left@m uk-text-center">
                     {c.t("s.21.1.1.1.1.h1", "Are you Ready?")}        

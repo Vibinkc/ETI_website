@@ -17,17 +17,17 @@ export default definePage(ROUTE, (c) => (
 <div className="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
 <div className="uk-width-1-1">
 <div id="page#0" className="uk-margin uk-width-2xlarge uk-margin-auto uk-text-center">
-        <div className="uk-grid uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-2@m uk-flex-center uk-grid-medium uk-grid-match" uk-grid="">                <div>
+        <div className="uk-grid uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-2@m uk-flex-center uk-grid-medium uk-grid-match" {...{ "uk-grid": "" }}>                <div>
 <div className="el-item uk-flex uk-flex-column">
         <a className="uk-tile-hover uk-flex-1 uk-panel uk-tile-muted uk-flex uk-flex-column uk-flex-middle uk-padding uk-margin-remove-first-child uk-link-toggle" href="/images/pdf/CET-Class-Schedule.pdf" target="_blank" download="">    
-        <span className="uk-text-emphasis el-image" uk-icon="icon: file-pdf; width: 45; height: 45;"></span>
+        <span className="uk-text-emphasis el-image" {...{ "uk-icon": "icon: file-pdf; width: 45; height: 45;" }}></span>
                 <h2 className="el-title uk-h5 uk-text-primary uk-margin-top uk-margin-auto-bottom">{c.t("s.7.1.1.1.1.1.1.1.1.3.h2", "Current Class Schedule")}</h2>        
         </a>    
 </div></div>
                 <div>
 <div className="el-item uk-flex uk-flex-column">
         <a className="uk-tile-hover uk-flex-1 uk-panel uk-tile-muted uk-flex uk-flex-column uk-flex-middle uk-padding uk-margin-remove-first-child uk-link-toggle" href="/images/pdf/Signing-up-for-classes.pdf" target="_blank" download="">    
-        <span className="uk-text-emphasis el-image" uk-icon="icon: file-pdf; width: 45; height: 45;"></span>
+        <span className="uk-text-emphasis el-image" {...{ "uk-icon": "icon: file-pdf; width: 45; height: 45;" }}></span>
                 <h2 className="el-title uk-h5 uk-text-primary uk-margin-top uk-margin-auto-bottom">{c.t("s.7.1.1.1.1.1.3.1.1.3.h2", "How to Sign Up for a Class")} </h2>        
         </a>    
 </div></div>

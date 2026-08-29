@@ -17,13 +17,13 @@ export default definePage(ROUTE, (c) => (
 <h1 className="uk-h2 uk-text-center">
                     {c.t("s.4.1.1.1.1.h1", "Photo Galleries")}        
 </h1>
-<div uk-filter="target: .js-filter;" className="uk-margin-medium uk-text-center">
-<ul className="el-nav uk-margin uk-subnav uk-flex-center" uk-margin="">
-        <li className="uk-active" uk-filter-control="" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.4.1.1.1.3.1.1.li", "<a href>All</a>") }} />
-        <li uk-filter-control={"{\"filter\":\"[data-tag~=\\\"Event\\\"]\"}"} data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.4.1.1.1.3.1.3.li", "<a href>Event</a>") }} />
-        <li uk-filter-control={"{\"filter\":\"[data-tag~=\\\"Graduation\\\"]\"}"} data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.4.1.1.1.3.1.5.li", "<a href>Graduation</a>") }} />
+<div {...{ "uk-filter": "target: .js-filter;" }} className="uk-margin-medium uk-text-center">
+<ul className="el-nav uk-margin uk-subnav uk-flex-center" {...{ "uk-margin": "" }}>
+        <li className="uk-active" {...{ "uk-filter-control": "" }} data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.4.1.1.1.3.1.1.li", "<a href>All</a>") }} />
+        <li {...{ "uk-filter-control": "{\"filter\":\"[data-tag~=\\\"Event\\\"]\"}" }} data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.4.1.1.1.3.1.3.li", "<a href>Event</a>") }} />
+        <li {...{ "uk-filter-control": "{\"filter\":\"[data-tag~=\\\"Graduation\\\"]\"}" }} data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.4.1.1.1.3.1.5.li", "<a href>Graduation</a>") }} />
 </ul>
-            <div className="uk-grid js-filter uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-flex-center uk-grid-match" uk-grid="">                        <div data-tag="Graduation">
+            <div className="uk-grid js-filter uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-flex-center uk-grid-match" {...{ "uk-grid": "" }}>                        <div data-tag="Graduation">
 <div className="el-item uk-flex uk-flex-column">
         <Link className="uk-flex-1 uk-card uk-card-default uk-card-small uk-transition-toggle uk-flex uk-flex-column uk-flex-middle uk-card-body uk-margin-remove-first-child uk-link-toggle" href="/about/photos/graduation/2025-graduation">    
         <div className="uk-inline-clip uk-flex-1 uk-flex uk-flex-column">    

@@ -11,7 +11,7 @@ export default definePage(ROUTE, (c) => (
   <>
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0{margin-top:7%;}#page\\#1 div.logoSM .el-image{height:90px; width: auto}#page\\#1 div.logoM .el-image{height:100px; width: auto}" }} />
 <div className="uk-section uk-padding-remove-vertical">
-<div className="uk-grid-margin-large uk-grid tm-grid-expand uk-grid-column-collapse uk-grid-row-large" uk-grid="">
+<div className="uk-grid-margin-large uk-grid tm-grid-expand uk-grid-column-collapse uk-grid-row-large" {...{ "uk-grid": "" }}>
 <div className="uk-grid-item-match uk-width-3-5@m">
         <div className="uk-card-primary uk-card uk-card-large uk-card-body uk-flex uk-flex-middle">    
                         <div className="uk-panel uk-width-1-1">            
@@ -42,7 +42,7 @@ export default definePage(ROUTE, (c) => (
 <div className="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
 <div className="uk-width-1-1">
 <div id="page#1" className="uk-margin uk-text-center">
-        <div className="uk-grid uk-child-width-1-1 uk-child-width-1-3@s uk-child-width-1-4@m uk-flex-center uk-grid-column-small uk-grid-row-medium uk-grid-match" uk-grid="">                <div>
+        <div className="uk-grid uk-child-width-1-1 uk-child-width-1-3@s uk-child-width-1-4@m uk-flex-center uk-grid-column-small uk-grid-row-medium uk-grid-match" {...{ "uk-grid": "" }}>                <div>
 <div className="el-item uk-flex uk-flex-column">
         <a className="uk-card-hover uk-flex-1 uk-card uk-card-overlay uk-card-small uk-flex uk-flex-column uk-flex-middle uk-card-body uk-margin-remove-first-child uk-link-toggle" href="https://www.ibew569.org/" target="_blank" rel="noreferrer">    
         <picture><img className="el-image" width="662" height="128" src={c.m("s.7.1.3.1.1.1.1.1.1.1.0.img", "/images/assets/logos/ibew569-logo.png")} alt={c.a("s.7.1.3.1.1.1.1.1.1.1.0.img", "IBEW 569 logo")} /></picture>

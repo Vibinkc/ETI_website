@@ -61,7 +61,7 @@ export default function NewsArticle({
 </div>
 <div className="uk-section-default uk-section uk-section-small-top uk-section-medium-bottom">
                                 <div className="uk-container">
-<div className="uk-grid-margin uk-grid tm-grid-expand" uk-grid="">
+<div className="uk-grid-margin uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>
 <div className="uk-width-3-4@m">
 <h1 className="uk-h2 uk-margin-bottom uk-width-2xlarge uk-margin-auto">
                     {c.t("s.7.1.1.1.1.h1", title)}
@@ -69,7 +69,7 @@ export default function NewsArticle({
 <p key={i}>{c.t(`s.7.1.1.1.3.${2 * i}.p`, p.text)}{p.after}</p>
 ))}</div>
 <nav className="uk-margin-medium-top uk-text-center">
-    <ul className="uk-pagination uk-margin-remove-bottom uk-flex-center" uk-margin={pagerMargin ? "" : undefined}>
+    <ul className="uk-pagination uk-margin-remove-bottom uk-flex-center" {...{ "uk-margin": pagerMargin ? "" : undefined }}>
                         {pagination.map((html, i) => (
                         <li key={i} data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r(`s.7.1.1.1.5.1.${2 * i + 1}.li`, html) }} />
                         ))}

@@ -21,7 +21,7 @@ export default definePage(ROUTE, (c) => (
 </h1>
 </div>
 </div>
-<div className="uk-grid-margin uk-grid tm-grid-expand" uk-grid="">
+<div className="uk-grid-margin uk-grid tm-grid-expand" {...{ "uk-grid": "" }}>
 <div className="uk-width-3-4@m uk-visible@m">
 </div>
 <NewsSidebar c={c} route={ROUTE} base="s.5.1.3.3" shareId="template-Fom_NwrK#0" latestId="template-Fom_NwrK#1" latestTitleClass="el-title uk-card-title" activeCategory={2} />

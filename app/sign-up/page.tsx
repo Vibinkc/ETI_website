@@ -23,7 +23,7 @@ export default definePage(ROUTE, (c) => (
 </h1><div className="uk-panel uk-text-lead uk-margin">{c.t("s.5.1.1.1.1.1.1.1.2.div", "Complete the form below to take the first step toward building a strong future in the electrical industry. For reporting purposes only.")}</div><div className="uk-panel uk-text-small uk-text-danger uk-margin"><p style={{ textAlign: "center" }} data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.5.1.1.1.1.1.1.1.3.0.p", "<em>*Fields that are required</em>") }} /></div>
 <h1 className="uk-h5 uk-heading-line uk-text-center" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.5.1.1.1.1.1.1.1.5.h1", "<span class=\"uk-text-background\">    \n        \n                    Personal Information        \n        \n        </span>") }} />
 <div className="uk-margin">
-        <div className="uk-flex-middle uk-grid-small uk-child-width-1-2@m" uk-grid="">    
+        <div className="uk-flex-middle uk-grid-small uk-child-width-1-2@m" {...{ "uk-grid": "" }}>    
                 <div className="el-item">
 <div data-ye-form-field="First_Name"><div className="uk-form-controls">
         <input className="uk-input uk-form-large" id="First_Name" type="text" name="First_Name" required={true} autoFocus={true} minLength={3} placeholder="First Name*" aria-label="First Name" />
@@ -161,7 +161,7 @@ export default definePage(ROUTE, (c) => (
 </div>
 <h1 className="uk-h5 uk-heading-line uk-text-center" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.5.1.1.1.1.1.1.1.27.h1", "<span class=\"uk-text-background\">    \n        \n                    Contact Details        \n        \n        </span>") }} />
 <div className="uk-margin">
-        <div className="uk-flex-middle uk-grid-small uk-child-width-1-2@m" uk-grid="">    
+        <div className="uk-flex-middle uk-grid-small uk-child-width-1-2@m" {...{ "uk-grid": "" }}>    
                 <div className="el-item">
 <div data-ye-form-field="Phone"><div className="uk-form-controls">
         <input className="uk-input" id="Phone" type="tel" name="Phone" required={true} placeholder="Phone*" aria-label="Phone" />
@@ -175,7 +175,7 @@ export default definePage(ROUTE, (c) => (
         </div>
 </div>
 <div className="uk-margin">
-        <div className="uk-flex-middle uk-grid-small uk-child-width-1-1@m" uk-grid="">    
+        <div className="uk-flex-middle uk-grid-small uk-child-width-1-1@m" {...{ "uk-grid": "" }}>    
                 <div className="el-item">
 <div data-ye-form-field="Address1"><div className="uk-form-controls">
         <input className="uk-input" id="Address1" type="text" name="Address1" required={true} placeholder="Street Address*" aria-label="Street Address" />
@@ -189,7 +189,7 @@ export default definePage(ROUTE, (c) => (
         </div>
 </div>
 <div className="uk-margin">
-        <div className="uk-flex-middle uk-grid-small uk-child-width-1-2@m" uk-grid="">    
+        <div className="uk-flex-middle uk-grid-small uk-child-width-1-2@m" {...{ "uk-grid": "" }}>    
                 <div className="el-item">
 <div data-ye-form-field="City"><div className="uk-form-controls">
         <input className="uk-input" id="City" type="text" name="City" required={true} placeholder="City*" aria-label="City" />

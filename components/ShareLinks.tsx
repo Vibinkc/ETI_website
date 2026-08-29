@@ -10,17 +10,17 @@
 export default function ShareLinks({ route }: { route: string }) {
   const u = encodeURIComponent(`https://etiedu.org${route}`);
   return (
-    <ul className="uk-child-width-auto uk-grid-small uk-flex-inline uk-flex-middle" uk-grid="">
+    <ul className="uk-child-width-auto uk-grid-small uk-flex-inline uk-flex-middle" {...{ "uk-grid": "" }}>
                 <li className="el-item">
-    <a className="el-link uk-icon-link" href={`https://www.facebook.com/sharer/sharer.php?u=${u}`} title="Tap here to share this page to Facebook." rel="noreferrer" target="_blank" aria-label="Tap here to share this page to Facebook."><span uk-icon="icon: facebook;"></span></a></li>
+    <a className="el-link uk-icon-link" href={`https://www.facebook.com/sharer/sharer.php?u=${u}`} title="Tap here to share this page to Facebook." rel="noreferrer" target="_blank" aria-label="Tap here to share this page to Facebook."><span {...{ "uk-icon": "icon: facebook;" }}></span></a></li>
                 <li className="el-item">
-    <a className="el-link uk-icon-link" href={`https://x.com/intent/post?url=${u}&text=`} title="Tap here to share this page to X." rel="noreferrer" target="_blank" aria-label="Tap here to share this page to X."><span uk-icon="icon: x;"></span></a></li>
+    <a className="el-link uk-icon-link" href={`https://x.com/intent/post?url=${u}&text=`} title="Tap here to share this page to X." rel="noreferrer" target="_blank" aria-label="Tap here to share this page to X."><span {...{ "uk-icon": "icon: x;" }}></span></a></li>
                 <li className="el-item">
-    <a className="el-link uk-icon-link" href={`https://bsky.app/intent/compose?text=Tap+here+to+share+this+page+to+Bluesky.%0A${u}`} rel="noreferrer" target="_blank" aria-label="Bluesky"><span uk-icon="icon: bluesky;"></span></a></li>
+    <a className="el-link uk-icon-link" href={`https://bsky.app/intent/compose?text=Tap+here+to+share+this+page+to+Bluesky.%0A${u}`} rel="noreferrer" target="_blank" aria-label="Bluesky"><span {...{ "uk-icon": "icon: bluesky;" }}></span></a></li>
                 <li className="el-item">
-    <a className="el-link uk-icon-link" href={`https://mastodon.social/share?url=${u}&text=`} title="Tap here to share this page to Mastodon." rel="noreferrer" target="_blank" aria-label="Tap here to share this page to Mastodon."><span uk-icon="icon: mastodon;"></span></a></li>
+    <a className="el-link uk-icon-link" href={`https://mastodon.social/share?url=${u}&text=`} title="Tap here to share this page to Mastodon." rel="noreferrer" target="_blank" aria-label="Tap here to share this page to Mastodon."><span {...{ "uk-icon": "icon: mastodon;" }}></span></a></li>
                 <li className="el-item">
-    <a className="el-link uk-icon-link" href={`https://www.linkedin.com/sharing/share-offsite/?url=${u}`} title="Tap here to share this page to LinkedIn." rel="noreferrer" target="_blank" aria-label="Tap here to share this page to LinkedIn."><span uk-icon="icon: linkedin;"></span></a></li>
+    <a className="el-link uk-icon-link" href={`https://www.linkedin.com/sharing/share-offsite/?url=${u}`} title="Tap here to share this page to LinkedIn." rel="noreferrer" target="_blank" aria-label="Tap here to share this page to LinkedIn."><span {...{ "uk-icon": "icon: linkedin;" }}></span></a></li>
         
         </ul>
   );
