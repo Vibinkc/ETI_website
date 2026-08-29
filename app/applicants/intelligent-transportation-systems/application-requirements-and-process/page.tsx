@@ -1,16 +1,17 @@
-import type { ReactNode } from "react";
+import { definePage, metadataFor } from "@/lib/page";
+import TitledSection from "@/components/TitledSection";
 import EntryRequirements from "@/components/EntryRequirements";
 import SectionHero from "@/components/SectionHero";
-import TitledSection from "@/components/TitledSection";
 
-import type { Accessor } from "@/components/applicants/types";
+const ROUTE = "/applicants/intelligent-transportation-systems/application-requirements-and-process";
 
-/**
- * Application Requirements and Process for the intelligent transportation systems apprenticeship.
- */
-export default function body(c: Accessor): ReactNode {
-  return (
-    <>
+// re-rendered on demand when the CMS publishes this page
+export const revalidate = 3600;
+
+export const generateMetadata = metadataFor(ROUTE, "Application Requirements and Process - Electrical Training Institute", undefined);
+
+export default definePage(ROUTE, (c) => (
+  <>
 <SectionHero c={c} hero={{ src: "/images/assets/heros/hero-g11.jpg", alt: "Electrician Trainees learning  in a classroom" }} crumbs={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }, { href: "/applicants/intelligent-transportation-systems", html: "<span property=\"name\">Intelligent Transportation Systems</span>" }]} current="Application Requirements and Process" title="Application Requirements and Process" lead="Before applying, make sure you meet the requirements below and have all required documents ready." section="s.4" />
 <TitledSection c={c} headingKey="s.6.1.1.1.1.1.0.1.h2" heading="Application Requirements" section="uk-section-default uk-section uk-section-medium-top uk-section-xsmall-bottom" width="uk-grid-item-match uk-width-1-1" card="uk-card-overlay uk-card uk-card-body"><div className="uk-panel uk-margin"><p>{c.t("s.6.1.1.1.1.2.0.p", "Applicants must meet the following minimum requirements to apply for the Intelligent Transportation Systems Apprenticeship:")}
 </p>
@@ -45,6 +46,5 @@ export default function body(c: Accessor): ReactNode {
 <p>{c.t("s.8.1.1.1.14.2.p", "After orientation paperwork is completed, applicants will be scheduled for a drug screening.")}</p>
 <p>{c.t("s.8.1.1.1.14.4.p", "There are no tuition or registration fees for the program. Apprentices are responsible for purchasing required books and hand tools.")}</p>
 <p>{c.t("s.8.1.1.1.14.6.p", "New apprentice classes are scheduled based on industry demand.")}</p></div></TitledSection>
-    </>
-  );
-}
+  </>
+));

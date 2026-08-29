@@ -1,16 +1,17 @@
-import type { ReactNode } from "react";
+import { definePage, metadataFor } from "@/lib/page";
 import ReadyCta from "@/components/ReadyCta";
-import SectionHero from "@/components/SectionHero";
 import TitledSection from "@/components/TitledSection";
+import SectionHero from "@/components/SectionHero";
 
-import type { Accessor } from "@/components/applicants/types";
+const ROUTE = "/applicants/intelligent-transportation-systems/program-overview-and-curriculum";
 
-/**
- * Program Overview and Curriculum for the intelligent transportation systems apprenticeship.
- */
-export default function body(c: Accessor): ReactNode {
-  return (
-    <>
+// re-rendered on demand when the CMS publishes this page
+export const revalidate = 3600;
+
+export const generateMetadata = metadataFor(ROUTE, "Program Overview and Curriculum - Electrical Training Institute", undefined);
+
+export default definePage(ROUTE, (c) => (
+  <>
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0{margin-top:7%;}#page\\#1{margin-top:7%;}#page\\#2{text-transform: uppercase;}#page\\#3 .el-content{font-weight:bold;font-size:105%;}" }} />
 <SectionHero c={c} hero={{ src: "/images/assets/heros/hero-g17.jpg", alt: "Electrician Trainee digging a ditch for powerlines." }} crumbs={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }, { href: "/applicants/intelligent-transportation-systems", html: "<span property=\"name\">Intelligent Transportation Systems</span>" }]} current="Program Overview and Curriculum" title="Program Overview and Curriculum" lead="The Intelligent Transportation Systems (ITS) Apprenticeship is a four-year program that prepares individuals for careers working on public infrastructure systems. Apprentices gain hands-on experience with traffic signals, street lighting, and transportation technologies while completing classroom training that builds the technical knowledge required for the trade." />
 <TitledSection c={c} headingKey="s.7.1.1.1.1.0.1.h2" heading="Program Overview" section="uk-section-default uk-section uk-section-small-top uk-section-medium-bottom" panel="uk-panel uk-margin-medium-bottom" panelId="page#0"><div className="uk-panel uk-margin"><p>{c.t("s.7.1.1.1.2.0.p", "The Intelligent Transportation Systems (ITS) Apprenticeship is a four-year training program that prepares apprentices for careers as Transportation Systems Electricians. The program combines paid on-the-job training with structured classroom instruction, equipping apprentices with the technical knowledge and field experience required to work on critical public infrastructure systems.")}</p>
@@ -23,6 +24,5 @@ export default function body(c: Accessor): ReactNode {
 </div></div>
 <h2 className="uk-text-small uk-heading-line uk-margin-large-top uk-margin-medium-bottom uk-width-medium uk-margin-auto uk-text-center" id="page#2" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.7.1.1.1.5.h2", "<span>    \n        \n                    To Be Announced        \n        \n        </span>") }} /></TitledSection>
 <ReadyCta c={c} section="s.9" panelId={3} />
-    </>
-  );
-}
+  </>
+));

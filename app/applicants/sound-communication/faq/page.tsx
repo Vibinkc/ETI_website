@@ -1,14 +1,20 @@
-import type { ReactNode } from "react";
+import { definePage, metadataFor } from "@/lib/page";
+import ReadyCta from "@/components/ReadyCta";
+import FaqSection from "@/components/FaqSection";
+import SectionHero from "@/components/SectionHero";
 
-import type { Accessor } from "@/components/applicants/types";
+const ROUTE = "/applicants/sound-communication/faq";
 
-/**
- * The FAQ questions for the sound communication apprenticeship.
- */
-export default function body(c: Accessor): ReactNode {
-  return (
-    <>
-        
+// re-rendered on demand when the CMS publishes this page
+export const revalidate = 3600;
+
+export const generateMetadata = metadataFor(ROUTE, "FAQ - Electrical Training Institute", undefined);
+
+export default definePage(ROUTE, (c) => (
+  <>
+                <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0{margin-top:7%;}#page\\#1{margin-bottom:40px;}#page\\#1 .el-item{border-bottom: 1.5px dotted #7b7a7a; padding-bottom: 7px}#page\\#1 .el-content{margin-bottom:20px;}#page\\#1 .el-content ul{list-style-type: none;padding-left: 10px;}#page\\#2{background-color:#EBECE9;}#page\\#3{background-image:url(\"/images/assets/diagram.png\");background-repeat:repeat;}@media (max-width:900px){#page\\#3{background-image:none;}}#page\\#4 .el-content{font-weight:bold;font-size:105%;}" }} />
+<SectionHero c={c} hero={{ src: "/images/assets/heros/hero-g08.jpg", alt: "An Electrician and Trainee working on the jobsite." }} crumbs={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }, { href: "/applicants/sound-communication", html: "<span property=\"name\">Sound &amp; Communication</span>" }]} current="FAQ" title="Frequently Asked Questions" leadHtml={"This is where you will find most answers. If there should still be any questions left, don't hesitate to <a href=\"/contact\" title=\"Click here to contact us.\">contact us</a>."} />
+<FaqSection c={c} headingKey="s.7.1.1.1.1.1.0.1.h1">        
 <div className="el-item">
     <a className="el-title uk-accordion-title" href="" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.7.1.1.1.1.3.1.1.a", "What is the Sound & Communications Apprenticeship Program? <span uk-accordion-icon></span>") }} />
     <div className="uk-accordion-content">
@@ -131,6 +137,7 @@ export default function body(c: Accessor): ReactNode {
                 <div className="el-content uk-panel">{c.t("s.7.1.1.1.1.3.17.3.1.div", "The Sound & Communications Apprenticeship is a full-time program that combines full-time employment with scheduled classroom instruction.")}</div>                
     </div>
 </div>    
-    </>
-  );
-}
+</FaqSection>
+<ReadyCta c={c} section="s.9" panelId={4} />
+  </>
+));

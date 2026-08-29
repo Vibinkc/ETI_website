@@ -1,16 +1,17 @@
-import type { ReactNode } from "react";
+import { definePage, metadataFor } from "@/lib/page";
 import ReadyCta from "@/components/ReadyCta";
-import SectionHero from "@/components/SectionHero";
 import TitledSection from "@/components/TitledSection";
+import SectionHero from "@/components/SectionHero";
 
-import type { Accessor } from "@/components/applicants/types";
+const ROUTE = "/applicants/inside-wireman/program-overview-and-curriculum";
 
-/**
- * Program Overview and Curriculum for the inside wireman apprenticeship.
- */
-export default function body(c: Accessor): ReactNode {
-  return (
-    <>
+// re-rendered on demand when the CMS publishes this page
+export const revalidate = 3600;
+
+export const generateMetadata = metadataFor(ROUTE, "Program Overview and Curriculum - Electrical Training Institute", undefined);
+
+export default definePage(ROUTE, (c) => (
+  <>
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0{margin-top:7%;}#page\\#1{margin-top:7%;}#page\\#2 .el-content{font-weight:bold;font-size:105%;}" }} />
 <SectionHero c={c} hero={{ src: "/images/assets/heros/et-Landing.jpg", alt: "Woman electrician in the attic working on wires." }} crumbs={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }, { href: "/applicants/inside-wireman", html: "<span property=\"name\">Inside Wireman</span>" }]} current="Program Overview and Curriculum" title="Program Overview and Curriculum" lead="The Inside Wireman Apprenticeship offers a direct path to a career in the electrical industry. Apprentices earn while they learn, gaining hands-on experience and technical training needed to work on electrical systems that power buildings, infrastructure, and modern facilities." />
 <TitledSection c={c} headingKey="s.7.1.1.1.1.0.1.h2" heading="Program Overview" section="uk-section-default uk-section uk-section-small-top uk-section-medium-bottom" panel="uk-panel uk-margin-medium-bottom" panelId="page#0"><div className="uk-panel uk-margin"><p>{c.t("s.7.1.1.1.2.0.p", "The Inside Wireman Apprenticeship is a comprehensive five-year training program designed to prepare apprentices for careers as Journeyman Inside Wiremen. The program combines paid on-the-job training with structured classroom instruction, allowing apprentices to develop the skills and knowledge required to work in the electrical industry.")}</p>
@@ -128,6 +129,5 @@ export default function body(c: Accessor): ReactNode {
                 </div>
 </div></TitledSection>
 <ReadyCta c={c} section="s.9" panelId={2} />
-    </>
-  );
-}
+  </>
+));
