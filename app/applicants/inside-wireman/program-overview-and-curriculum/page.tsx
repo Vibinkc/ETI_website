@@ -1,9 +1,7 @@
 import { definePage, metadataFor } from "@/lib/page";
 import ReadyCta from "@/components/ReadyCta";
-import Breadcrumb from "@/components/Breadcrumb";
-import PageHero from "@/components/PageHero";
-import HeroHeading from "@/components/HeroHeading";
 import TitledSection from "@/components/TitledSection";
+import SectionHero from "@/components/SectionHero";
 
 const ROUTE = "/applicants/inside-wireman/program-overview-and-curriculum";
 
@@ -15,10 +13,7 @@ export const generateMetadata = metadataFor(ROUTE, "Program Overview and Curricu
 export default definePage(ROUTE, (c) => (
   <>
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0{margin-top:7%;}#page\\#1{margin-top:7%;}#page\\#2 .el-content{font-weight:bold;font-size:105%;}" }} />
-<PageHero c={c} image={{ imgKey: "s.5.1.3.1.1.1.0.img", src: "/images/assets/heros/et-Landing.jpg", alt: "Woman electrician in the attic working on wires.", width: "1200", height: "1200", aspectAuto: true }}>        
-<Breadcrumb c={c} keyBase="s.5.1.1.1.1.1" links={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }, { href: "/applicants/inside-wireman", html: "<span property=\"name\">Inside Wireman</span>" }]} current="Program Overview and Curriculum" />
-<HeroHeading c={c} titleKey="s.5.1.1.1.3.h1" title="Program Overview and Curriculum" leadKey="s.5.1.1.1.4.div" lead="The Inside Wireman Apprenticeship offers a direct path to a career in the electrical industry. Apprentices earn while they learn, gaining hands-on experience and technical training needed to work on electrical systems that power buildings, infrastructure, and modern facilities." />
-</PageHero>
+<SectionHero c={c} hero={{ src: "/images/assets/heros/et-Landing.jpg", alt: "Woman electrician in the attic working on wires." }} crumbs={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }, { href: "/applicants/inside-wireman", html: "<span property=\"name\">Inside Wireman</span>" }]} current="Program Overview and Curriculum" title="Program Overview and Curriculum" lead="The Inside Wireman Apprenticeship offers a direct path to a career in the electrical industry. Apprentices earn while they learn, gaining hands-on experience and technical training needed to work on electrical systems that power buildings, infrastructure, and modern facilities." />
 <TitledSection c={c} headingKey="s.7.1.1.1.1.0.1.h2" heading="Program Overview" section="uk-section-default uk-section uk-section-small-top uk-section-medium-bottom" panel="uk-panel uk-margin-medium-bottom" panelId="page#0"><div className="uk-panel uk-margin"><p>{c.t("s.7.1.1.1.2.0.p", "The Inside Wireman Apprenticeship is a comprehensive five-year training program designed to prepare apprentices for careers as Journeyman Inside Wiremen. The program combines paid on-the-job training with structured classroom instruction, allowing apprentices to develop the skills and knowledge required to work in the electrical industry.")}</p>
 <p>{c.t("s.7.1.1.1.2.2.p", "Apprentices complete approximately 8,000 hours of on-the-job training working for licensed electrical contractors throughout San Diego County. This hands-on experience is supported by a minimum of 1,000 hours of related classroom and lab instruction, where apprentices study electrical theory, safety practices, and industry standards while reinforcing skills learned in the field.")}</p>
 <p>{c.t("s.7.1.1.1.2.4.p", "Inside Wireman apprentices install, maintain, and troubleshoot electrical systems in commercial and industrial facilities. This includes working with electrical conduits, wiring systems, cables, motor controls, and panelboards used to power buildings and equipment.")}</p>

@@ -1,8 +1,6 @@
 import { definePage, metadataFor } from "@/lib/page";
 import ReadyCta from "@/components/ReadyCta";
-import Breadcrumb from "@/components/Breadcrumb";
-import PageHero from "@/components/PageHero";
-import HeroHeading from "@/components/HeroHeading";
+import SectionHero from "@/components/SectionHero";
 
 const ROUTE = "/applicants/veep";
 
@@ -14,10 +12,7 @@ export const generateMetadata = metadataFor(ROUTE, "VEEP - Electrical Training I
 export default definePage(ROUTE, (c) => (
   <>
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0 .el-content{font-weight:bold;font-size:105%;}" }} />
-<PageHero c={c} image={{ imgKey: "s.5.1.3.1.1.1.0.img", src: "/images/assets/logos/VEEP_Logo.png", alt: "Electrician Trainee working with a drill on a ladder.", width: "300", height: "256", aspectAuto: true }} rightCardClass="uk-card-primary uk-card uk-card-large uk-card-body uk-flex uk-flex-column">        
-<Breadcrumb c={c} keyBase="s.5.1.1.1.1.1" links={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }]} current="VEEP" />
-<HeroHeading c={c} titleKey="s.5.1.1.1.3.h1" title={"IBEW Veteran\u2019s Electrical Entry Program (VEEP)"} leadKey="s.5.1.1.1.4.div" lead={"The Veteran\u2019s Electrical Entry Program (VEEP) is a pre-apprenticeship initiative developed to help U.S. military veterans and transitioning service members start careers in the electrical industry."} />
-</PageHero>
+<SectionHero c={c} hero={{ src: "/images/assets/logos/VEEP_Logo.png", alt: "Electrician Trainee working with a drill on a ladder." }} crumbs={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }]} current="VEEP" title={"IBEW Veteran\u2019s Electrical Entry Program (VEEP)"} lead={"The Veteran\u2019s Electrical Entry Program (VEEP) is a pre-apprenticeship initiative developed to help U.S. military veterans and transitioning service members start careers in the electrical industry."} width="300" height="256" rightCardClass="uk-card-primary uk-card uk-card-large uk-card-body uk-flex uk-flex-column" />
 <div className="uk-section-default uk-section">
                                 <div className="uk-container">                
 <div className="uk-grid-margin uk-container uk-container-xsmall">

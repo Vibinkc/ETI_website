@@ -1,9 +1,7 @@
 import { definePage, metadataFor } from "@/lib/page";
 import ReadyCta from "@/components/ReadyCta";
-import Breadcrumb from "@/components/Breadcrumb";
-import PageHero from "@/components/PageHero";
-import HeroHeading from "@/components/HeroHeading";
 import FaqSection from "@/components/FaqSection";
+import SectionHero from "@/components/SectionHero";
 
 const ROUTE = "/electrician-trainees/faq";
 
@@ -15,10 +13,7 @@ export const generateMetadata = metadataFor(ROUTE, "FAQ - Electrical Training In
 export default definePage(ROUTE, (c) => (
   <>
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0{margin-top:7%;}#page\\#1{margin-bottom:40px;}#page\\#1 .el-item{border-bottom: 1.5px dotted #7b7a7a; padding-bottom: 7px}#page\\#1 .el-content{margin-bottom:20px;}#page\\#1 .el-content ul{list-style-type: none;padding-left: 10px;}#page\\#2{background-color:#EBECE9;}#page\\#3{background-image:url(\"/images/assets/diagram.png\");background-repeat:repeat;}@media (max-width:900px){#page\\#3{background-image:none;}}#page\\#4 .el-content{font-weight:bold;font-size:105%;}" }} />
-<PageHero c={c} image={{ imgKey: "s.5.1.3.1.1.1.0.img", src: "/images/assets/heros/hero-g14.jpg", alt: "Instructon pointout instructions on paper with Electrician Trainees holding the same paper.", width: "1200", height: "1200", aspectAuto: true }}>        
-<Breadcrumb c={c} keyBase="s.5.1.1.1.1.1" links={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/electrician-trainees", html: "<span property=\"name\">Electrician Trainees</span>" }]} current="FAQ" />
-<HeroHeading c={c} titleKey="s.5.1.1.1.3.h1" title="Frequently Asked Questions" leadKey="s.5.1.1.1.4.div" leadHtml={"This is where you will find most answers. If there should still be any questions left, don't hesitate to <a href=\"/contact\" title=\"Click here to contact us.\">contact us</a>."} />
-</PageHero>
+<SectionHero c={c} hero={{ src: "/images/assets/heros/hero-g14.jpg", alt: "Instructon pointout instructions on paper with Electrician Trainees holding the same paper." }} crumbs={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/electrician-trainees", html: "<span property=\"name\">Electrician Trainees</span>" }]} current="FAQ" title="Frequently Asked Questions" leadHtml={"This is where you will find most answers. If there should still be any questions left, don't hesitate to <a href=\"/contact\" title=\"Click here to contact us.\">contact us</a>."} />
 <FaqSection c={c} headingKey="s.7.1.1.1.1.1.0.1.h1">        
 <div className="el-item">
     <a className="el-title uk-accordion-title" href="" data-cms-rich="" dangerouslySetInnerHTML={{ __html: c.r("s.7.1.1.1.1.3.1.1.a", "What is an Electrician Trainee? <span uk-accordion-icon></span>") }} />

@@ -1,7 +1,5 @@
 import { definePage, metadataFor } from "@/lib/page";
-import Breadcrumb from "@/components/Breadcrumb";
-import PageHero from "@/components/PageHero";
-import HeroHeading from "@/components/HeroHeading";
+import SectionHero from "@/components/SectionHero";
 
 const ROUTE = "/continuing-education/classes";
 
@@ -13,10 +11,7 @@ export const generateMetadata = metadataFor(ROUTE, "Classes - Electrical Trainin
 export default definePage(ROUTE, (c) => (
   <>
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0 .el-title{display: flex; align-items: center; justify-content: center; /* optional for horizontal center */ height: 100%; font-weight: bold;}" }} />
-<PageHero c={c} image={{ imgKey: "s.5.1.3.1.1.1.0.img", src: "/images/assets/heros/hero-g18.jpg", alt: "students in a classroom", width: "1200", height: "1200", aspectAuto: true }} rightCardClass="uk-card-default uk-card uk-card-body uk-padding-remove uk-flex uk-flex-column">        
-<Breadcrumb c={c} keyBase="s.5.1.1.1.1.1" links={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/continuing-education", html: "<span property=\"name\">Continuing Education</span>" }]} current="Classes" />
-<HeroHeading c={c} titleKey="s.5.1.1.1.3.h1" title="Classes" leadKey="s.5.1.1.1.4.div" lead="Continuing education helps electrical professionals stay sharp, stay qualified, and stay ahead in a changing industry. This section features training opportunities designed to strengthen skills, support certification requirements and promote long-term success in the union electrical trade." />
-</PageHero>
+<SectionHero c={c} hero={{ src: "/images/assets/heros/hero-g18.jpg", alt: "students in a classroom" }} crumbs={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/continuing-education", html: "<span property=\"name\">Continuing Education</span>" }]} current="Classes" title="Classes" lead="Continuing education helps electrical professionals stay sharp, stay qualified, and stay ahead in a changing industry. This section features training opportunities designed to strengthen skills, support certification requirements and promote long-term success in the union electrical trade." rightCardClass="uk-card-default uk-card uk-card-body uk-padding-remove uk-flex uk-flex-column" />
 <div className="uk-section-default uk-section">
                                 <div className="uk-container">                
 <div className="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">

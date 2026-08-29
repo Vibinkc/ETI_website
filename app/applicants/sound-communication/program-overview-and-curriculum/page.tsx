@@ -1,9 +1,7 @@
 import { definePage, metadataFor } from "@/lib/page";
 import ReadyCta from "@/components/ReadyCta";
-import Breadcrumb from "@/components/Breadcrumb";
-import PageHero from "@/components/PageHero";
-import HeroHeading from "@/components/HeroHeading";
 import TitledSection from "@/components/TitledSection";
+import SectionHero from "@/components/SectionHero";
 
 const ROUTE = "/applicants/sound-communication/program-overview-and-curriculum";
 
@@ -15,10 +13,7 @@ export const generateMetadata = metadataFor(ROUTE, "Program Overview and Curricu
 export default definePage(ROUTE, (c) => (
   <>
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0{margin-top:7%;}#page\\#1{margin-top:7%;}#page\\#2 .el-content{font-weight:bold;font-size:105%;}" }} />
-<PageHero c={c} image={{ imgKey: "s.5.1.3.1.1.1.0.img", src: "/images/assets/heros/hero-em03.jpg", alt: "Electrician trainee in school working with wires.", width: "1200", height: "1200", lazy: true }} rightWidth="uk-width-2-5@m" rightCardClass="uk-card-primary uk-card uk-card-body uk-padding-remove" imageWrapClass="uk-margin">        
-<Breadcrumb c={c} keyBase="s.5.1.1.1.1.1" links={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }, { href: "/applicants/sound-communication", html: "<span property=\"name\">Sound &amp; Communication</span>" }]} current="Program Overview and Curriculum" />
-<HeroHeading c={c} titleKey="s.5.1.1.1.3.h1" title="Program Overview and Curriculum" leadKey="s.5.1.1.1.4.div" lead="Start a career in the fast-growing world of low-voltage technology. The Sound & Communications Apprenticeship combines paid, hands-on training with classroom instruction, giving you the skills to install and maintain everything from data networks and security systems to audio/visual and life-safety systems." />
-</PageHero>
+<SectionHero c={c} hero={{ src: "/images/assets/heros/hero-em03.jpg", alt: "Electrician trainee in school working with wires." }} crumbs={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }, { href: "/applicants/sound-communication", html: "<span property=\"name\">Sound &amp; Communication</span>" }]} current="Program Overview and Curriculum" title="Program Overview and Curriculum" lead="Start a career in the fast-growing world of low-voltage technology. The Sound & Communications Apprenticeship combines paid, hands-on training with classroom instruction, giving you the skills to install and maintain everything from data networks and security systems to audio/visual and life-safety systems." aspectAuto={false} lazy rightWidth="uk-width-2-5@m" rightCardClass="uk-card-primary uk-card uk-card-body uk-padding-remove" imageWrapClass="uk-margin" />
 <TitledSection c={c} headingKey="s.7.1.1.1.1.0.1.h2" heading="Program Overview" section="uk-section-default uk-section uk-section-small-top uk-section-medium-bottom" panel="uk-panel uk-margin-medium-bottom" panelId="page#0"><div className="uk-panel uk-margin"><p>{c.t("s.7.1.1.1.2.0.p", "The Sound & Communications Apprenticeship is a four-year training program that prepares apprentices for careers as Telecommunications Installers and Technicians. The program combines paid on-the-job training with classroom instruction, allowing apprentices to develop the technical skills needed to work in the growing low-voltage industry.")}</p>
 <p>{c.t("s.7.1.1.1.2.2.p", "Apprentices complete approximately 6,000 hours of on-the-job training, gaining hands-on experience installing, maintaining, and troubleshooting voice, data, and video systems. This field experience is supported by a minimum of 480 hours of classroom and lab instruction, where apprentices study the theory and practices required for success in the trade.")}</p>
 <p>{c.t("s.7.1.1.1.2.4.p", "Sound & Communications apprentices work in both new construction and existing facilities installing cabling and equipment for telephone systems, computer networks, video distribution, security and access control, audio/video systems, and fire and life-safety systems.")}</p>

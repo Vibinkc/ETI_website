@@ -1,9 +1,7 @@
 import { definePage, metadataFor } from "@/lib/page";
-import Breadcrumb from "@/components/Breadcrumb";
-import PageHero from "@/components/PageHero";
-import HeroHeading from "@/components/HeroHeading";
 import TitledSection from "@/components/TitledSection";
 import EntryRequirements from "@/components/EntryRequirements";
+import SectionHero from "@/components/SectionHero";
 
 const ROUTE = "/applicants/intelligent-transportation-systems/application-requirements-and-process";
 
@@ -14,10 +12,7 @@ export const generateMetadata = metadataFor(ROUTE, "Application Requirements and
 
 export default definePage(ROUTE, (c) => (
   <>
-<PageHero c={c} image={{ imgKey: "s.4.1.3.1.1.1.0.img", src: "/images/assets/heros/hero-g11.jpg", alt: "Electrician Trainees learning  in a classroom", width: "1200", height: "1200", aspectAuto: true }}>        
-<Breadcrumb c={c} keyBase="s.4.1.1.1.1.1" links={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }, { href: "/applicants/intelligent-transportation-systems", html: "<span property=\"name\">Intelligent Transportation Systems</span>" }]} current="Application Requirements and Process" />
-<HeroHeading c={c} titleKey="s.4.1.1.1.3.h1" title="Application Requirements and Process" leadKey="s.4.1.1.1.4.div" lead="Before applying, make sure you meet the requirements below and have all required documents ready." />
-</PageHero>
+<SectionHero c={c} hero={{ src: "/images/assets/heros/hero-g11.jpg", alt: "Electrician Trainees learning  in a classroom" }} crumbs={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }, { href: "/applicants/intelligent-transportation-systems", html: "<span property=\"name\">Intelligent Transportation Systems</span>" }]} current="Application Requirements and Process" title="Application Requirements and Process" lead="Before applying, make sure you meet the requirements below and have all required documents ready." section="s.4" />
 <TitledSection c={c} headingKey="s.6.1.1.1.1.1.0.1.h2" heading="Application Requirements" section="uk-section-default uk-section uk-section-medium-top uk-section-xsmall-bottom" width="uk-grid-item-match uk-width-1-1" card="uk-card-overlay uk-card uk-card-body"><div className="uk-panel uk-margin"><p>{c.t("s.6.1.1.1.1.2.0.p", "Applicants must meet the following minimum requirements to apply for the Intelligent Transportation Systems Apprenticeship:")}
 </p>
 <EntryRequirements c={c} base="s.6.1.1.1.1.2.2" />

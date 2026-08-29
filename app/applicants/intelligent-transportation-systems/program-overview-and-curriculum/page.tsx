@@ -1,9 +1,7 @@
 import { definePage, metadataFor } from "@/lib/page";
 import ReadyCta from "@/components/ReadyCta";
-import Breadcrumb from "@/components/Breadcrumb";
-import PageHero from "@/components/PageHero";
-import HeroHeading from "@/components/HeroHeading";
 import TitledSection from "@/components/TitledSection";
+import SectionHero from "@/components/SectionHero";
 
 const ROUTE = "/applicants/intelligent-transportation-systems/program-overview-and-curriculum";
 
@@ -15,10 +13,7 @@ export const generateMetadata = metadataFor(ROUTE, "Program Overview and Curricu
 export default definePage(ROUTE, (c) => (
   <>
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0{margin-top:7%;}#page\\#1{margin-top:7%;}#page\\#2{text-transform: uppercase;}#page\\#3 .el-content{font-weight:bold;font-size:105%;}" }} />
-<PageHero c={c} image={{ imgKey: "s.5.1.3.1.1.1.0.img", src: "/images/assets/heros/hero-g17.jpg", alt: "Electrician Trainee digging a ditch for powerlines.", width: "1200", height: "1200", aspectAuto: true }}>        
-<Breadcrumb c={c} keyBase="s.5.1.1.1.1.1" links={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }, { href: "/applicants/intelligent-transportation-systems", html: "<span property=\"name\">Intelligent Transportation Systems</span>" }]} current="Program Overview and Curriculum" />
-<HeroHeading c={c} titleKey="s.5.1.1.1.3.h1" title="Program Overview and Curriculum" leadKey="s.5.1.1.1.4.div" lead="The Intelligent Transportation Systems (ITS) Apprenticeship is a four-year program that prepares individuals for careers working on public infrastructure systems. Apprentices gain hands-on experience with traffic signals, street lighting, and transportation technologies while completing classroom training that builds the technical knowledge required for the trade." />
-</PageHero>
+<SectionHero c={c} hero={{ src: "/images/assets/heros/hero-g17.jpg", alt: "Electrician Trainee digging a ditch for powerlines." }} crumbs={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/applicants", html: "<span property=\"name\">Applicants</span>" }, { href: "/applicants/intelligent-transportation-systems", html: "<span property=\"name\">Intelligent Transportation Systems</span>" }]} current="Program Overview and Curriculum" title="Program Overview and Curriculum" lead="The Intelligent Transportation Systems (ITS) Apprenticeship is a four-year program that prepares individuals for careers working on public infrastructure systems. Apprentices gain hands-on experience with traffic signals, street lighting, and transportation technologies while completing classroom training that builds the technical knowledge required for the trade." />
 <TitledSection c={c} headingKey="s.7.1.1.1.1.0.1.h2" heading="Program Overview" section="uk-section-default uk-section uk-section-small-top uk-section-medium-bottom" panel="uk-panel uk-margin-medium-bottom" panelId="page#0"><div className="uk-panel uk-margin"><p>{c.t("s.7.1.1.1.2.0.p", "The Intelligent Transportation Systems (ITS) Apprenticeship is a four-year training program that prepares apprentices for careers as Transportation Systems Electricians. The program combines paid on-the-job training with structured classroom instruction, equipping apprentices with the technical knowledge and field experience required to work on critical public infrastructure systems.")}</p>
 <p>{c.t("s.7.1.1.1.2.2.p", "Apprentices complete approximately 6,400 hours of on-the-job training with signatory contractors, working under the supervision of experienced Journeyman Transportation Systems Electricians. Apprentices rotate assignments to gain broad exposure to transportation and municipal electrical systems. Contractor placement is coordinated through the Electrical Training Institute.")}</p>
 <p>{c.t("s.7.1.1.1.2.4.p", "In addition to field training, apprentices complete approximately 802 hours of classroom instruction, attending classes two evenings per week. Coursework includes lectures, hands-on lab training, and competency assessments designed to reinforce real-world skills and ensure technical proficiency.")}</p>

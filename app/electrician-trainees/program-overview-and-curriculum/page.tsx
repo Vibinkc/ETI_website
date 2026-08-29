@@ -1,9 +1,7 @@
 import { definePage, metadataFor } from "@/lib/page";
 import ReadyCta from "@/components/ReadyCta";
-import Breadcrumb from "@/components/Breadcrumb";
-import PageHero from "@/components/PageHero";
-import HeroHeading from "@/components/HeroHeading";
 import TitledSection from "@/components/TitledSection";
+import SectionHero from "@/components/SectionHero";
 
 const ROUTE = "/electrician-trainees/program-overview-and-curriculum";
 
@@ -15,10 +13,7 @@ export const generateMetadata = metadataFor(ROUTE, "Program Overview and Curricu
 export default definePage(ROUTE, (c) => (
   <>
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0{margin-top:7%;}#page\\#1{margin-top:7%;}#page\\#2{text-transform: uppercase;}#page\\#3 .el-content{font-weight:bold;font-size:105%;}" }} />
-<PageHero c={c} image={{ imgKey: "s.5.1.3.1.1.1.0.img", src: "/images/assets/heros/hero-w03.jpg", alt: "Electrician Trainee learning about the tools of the trade.", width: "1200", height: "1200", aspectAuto: true }}>        
-<Breadcrumb c={c} keyBase="s.5.1.1.1.1.1" links={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/electrician-trainees", html: "<span property=\"name\">Electrician Trainees</span>" }]} current="Program Overview and Curriculum" />
-<HeroHeading c={c} titleKey="s.5.1.1.1.3.h1" title="Program Overview and Curriculum" leadKey="s.5.1.1.1.4.div" lead="The Electrician Trainee Program provides a structured starting point for individuals entering the electrical industry. Trainees gain real-world jobsite experience while completing state-approved classroom instruction and working toward California electrician certification. This program allows new workers to develop foundational skills while working under the supervision of a state-certified electrician." />
-</PageHero>
+<SectionHero c={c} hero={{ src: "/images/assets/heros/hero-w03.jpg", alt: "Electrician Trainee learning about the tools of the trade." }} crumbs={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/electrician-trainees", html: "<span property=\"name\">Electrician Trainees</span>" }]} current="Program Overview and Curriculum" title="Program Overview and Curriculum" lead="The Electrician Trainee Program provides a structured starting point for individuals entering the electrical industry. Trainees gain real-world jobsite experience while completing state-approved classroom instruction and working toward California electrician certification. This program allows new workers to develop foundational skills while working under the supervision of a state-certified electrician." />
 <TitledSection c={c} headingKey="s.7.1.1.1.1.0.1.h2" heading="Program Overview" section="uk-section-default uk-section uk-section-small-top uk-section-medium-bottom" panel="uk-panel uk-margin-medium-bottom" panelId="page#0"><div className="uk-panel uk-margin"><p>{c.t("s.7.1.1.1.2.0.p", "The Electrician Trainee Program provides a structured entry point into the electrical industry for individuals beginning their careers. Electrician Trainees work toward California electrician certification while gaining real-world job-site experience and completing state-approved classroom instruction.")}</p>
 <p>{c.t("s.7.1.1.1.2.2.p", "Electrician Trainees are entry-level workers who are enrolled in ETI training and registered with the State of California. While not yet apprentices or journeymen, trainees are legally permitted to perform electrical work under the supervision of a state-certified electrician. California law requires trainees to complete at least 150 hours of classroom instruction each year in a state-approved training program such as ETI.")}</p>
 <p>{c.t("s.7.1.1.1.2.4.p", "The Electrician Trainee pathway typically begins by signing the entry-level books at IBEW Local 569 and accepting dispatch to an entry-level position with a signatory electrical contractor. These positions allow new workers to gain practical experience while attending ETI classes and progressing toward certification.")}</p>

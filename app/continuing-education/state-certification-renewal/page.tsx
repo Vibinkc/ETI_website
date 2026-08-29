@@ -1,7 +1,5 @@
 import { definePage, metadataFor } from "@/lib/page";
-import Breadcrumb from "@/components/Breadcrumb";
-import PageHero from "@/components/PageHero";
-import HeroHeading from "@/components/HeroHeading";
+import SectionHero from "@/components/SectionHero";
 
 const ROUTE = "/continuing-education/state-certification-renewal";
 
@@ -13,10 +11,7 @@ export const generateMetadata = metadataFor(ROUTE, "State Certification Renewal 
 export default definePage(ROUTE, (c) => (
   <>
                 <style className="uk-margin-remove-adjacent" dangerouslySetInnerHTML={{ __html: "#page\\#0 .el-content{line-height: 1.4em;padding: 10px;}" }} />
-<PageHero c={c} image={{ imgKey: "s.5.1.3.1.1.1.0.img", src: "/images/assets/heros/hero-wm03.jpg", alt: "Electrician testing a power box", width: "1200", height: "1200", aspectAuto: true }}>        
-<Breadcrumb c={c} keyBase="s.5.1.1.1.1.1" links={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/continuing-education", html: "<span property=\"name\">Continuing Education</span>" }]} current="State Certification Renewal" />
-<HeroHeading c={c} titleKey="s.5.1.1.1.3.h1" title="State Certification Renewal" leadKey="s.5.1.1.1.4.div" lead="Renew your certification with the State of California to remain eligible to work as an electrician." />
-</PageHero>
+<SectionHero c={c} hero={{ src: "/images/assets/heros/hero-wm03.jpg", alt: "Electrician testing a power box" }} crumbs={[{ href: "/", html: "<span property=\"name\">Home</span>" }, { href: "/continuing-education", html: "<span property=\"name\">Continuing Education</span>" }]} current="State Certification Renewal" title="State Certification Renewal" lead="Renew your certification with the State of California to remain eligible to work as an electrician." />
 <div className="uk-section-default uk-section uk-section-medium-top uk-section-xsmall-bottom">
                                 <div className="uk-container uk-container-small">                
 <div className="uk-grid-margin uk-container uk-container-xsmall">
